@@ -13,3 +13,14 @@
 1. yay as my package manager / aur helper
 1. wlogout
 1. lazygit for using git
+1. Waypaper for managing wallpapers along with swww as the backend
+1. nwg-look to control look of gtk3 applications
+
+### Files to be added to dotfiles
+- [ ] Hyprland
+- [ ] Waybar
+- [ ] Mako
+- [ ] Wlogout
+- [ ] Wofi
+- [ ] Wallpapers
+- [ ] Waypaper
