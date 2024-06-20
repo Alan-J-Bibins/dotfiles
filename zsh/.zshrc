@@ -12,6 +12,16 @@ alias tsl='sudo -E timeshift-launcher'
 alias ff='clear && fastfetch'
 export ZSH=$HOME/.zsh
 
+#yazi
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
 function dls(){
     DIR="$*"
     du -shc * | sort -h

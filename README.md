@@ -3,6 +3,7 @@
 ### Applications that I use:
 
 1. Hyprland as the window manager
+1. SDDM as my display manager
 1. Waybar as the status bar
 1. Mako as the  notification daemon
 1. kitty terminal
