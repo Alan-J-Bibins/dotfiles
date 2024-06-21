@@ -6,7 +6,7 @@
 1. SDDM as my display manager
 1. Waybar as the status bar
 1. Mako as the  notification daemon
-1. kitty terminal
+1. kitty as my terminal
 1. Pywal for generating colorschemes
 1. Waybar as the status bar
 1. Overskride for bluetooth
@@ -19,6 +19,9 @@
 
 ### Files to be added to dotfiles
 - [ ] Hyprland
+- [x] Kitty
+- [x] Zsh
+- [ ] Pywal
 - [ ] Waybar
 - [ ] Mako
 - [ ] Wlogout
