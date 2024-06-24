@@ -1,0 +1,58 @@
+@import "/home/alan/.cache/wal/colors-waybar.css";
+window {
+margin: 0px;
+border: 1px solid @color12;
+border-radius: 10px;
+background-color: @background;
+}
+#input {
+margin: 5px;
+border: none;
+border-radius: 10px;
+color: @foreground;
+background-color: @background;
+}
+
+#inner-box {
+margin: 5px;
+border-radius: 10px;
+border: none;
+/* background-color: @color7; */
+background-color: @background;
+}
+
+#outer-box {
+margin: 5px;
+border-radius: 10px;
+border: @color8;
+background-color: @background;
+}
+
+#scroll {
+margin: 0px;
+border: none;
+}
+
+#text {
+margin: 5px;
+border: none;
+color: @foreground;
+} 
+
+#entry.activatable #text {
+color: @color4;
+}
+
+#entry > * {
+color: @color3;
+}
+
+#entry:selected {
+background-color: @color8;
+border-radius: 10px;
+}
+
+#entry:selected #text {
+color: @background;
+font-weight: bold;
+}
