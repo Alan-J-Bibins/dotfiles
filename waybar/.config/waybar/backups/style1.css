@@ -1,0 +1,51 @@
+@import url("/home/alan/.cache/wal/colors-waybar.css");
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: JetBrains Mono;
+    font-size: 15px;
+}
+window#waybar {
+    background-color: transparent;
+    border-bottom: transparent;
+    color: @background;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#workspaces button.active {
+    background-color: @color12;
+    border-radius: 10px;
+    color: @background;
+}
+
+#workspaces {
+    margin: 2px;
+}
+
+.modules-left {
+    margin-right: 12px;
+    margin-left: 12px;
+    background-color: @cursor;
+    padding: 0px 10px 0px;
+    border-radius: 10px;
+    border: @color7;
+}
+
+.modules-center {
+    margin-right: 12px;
+    border: @color7;
+    padding: 0px 10px 0px;
+    margin-left: 12px;
+    background-color: @cursor;
+    border-radius: 10px;
+}
+
+.modules-right {
+    padding: 0px 10px 0px;
+    border: @color7;
+    background-color: @cursor;
+    margin-right: 12px;
+    margin-left: 12px;
+    border-radius: 10px;
+}
+

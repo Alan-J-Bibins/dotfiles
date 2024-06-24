@@ -1,0 +1,60 @@
+@import url("/home/alan/.cache/wal/colors-waybar.css");
+/* Dark mode */
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: JetBrains Mono;
+    font-size: 15px;
+    font-weight:bold;
+}
+window#waybar {
+    background-color: transparent;
+    border-bottom: transparent;
+    color: @color11;
+}
+
+#workspaces button {
+    color: @color11;
+}
+
+#workspaces button.active {
+    background-color: @color11;
+    border-radius: 10px;
+    padding:0px 15px 0px;
+    transition-property:padding;
+    transition-duration: .25s;
+    color: @background;
+}
+
+#workspaces {
+    margin: 2px;
+    background-color: @background;
+    color: @color11;
+}
+
+.modules-left {
+    margin-right: 12px;
+    margin-left: 12px;
+    background-color: @background;
+    padding: 0px 10px 0px;
+    border-radius: 10px;
+    border: @color11 solid 1px;
+}
+
+.modules-center {
+    margin-right: 12px;
+    border: @color11 solid 1px;
+    padding: 0px 10px 0px;
+    margin-left: 12px;
+    background-color: @background;
+    border-radius: 10px;
+}
+
+.modules-right {
+    border: @color11 solid 1px;
+    padding: 0px 10px 0px;
+    background-color: @background;
+    margin-right: 12px;
+    margin-left: 12px;
+    border-radius: 10px;
+}
+
