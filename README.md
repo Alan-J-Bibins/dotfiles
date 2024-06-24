@@ -18,13 +18,13 @@
 1. nwg-look to control look of gtk3 applications
 
 ### Files to be added to dotfiles
-- [ ] Hyprland
+- [X] Hyprland
 - [x] Kitty
 - [x] Zsh
 - [ ] Pywal
-- [ ] Waybar
+- [X] Waybar
 - [ ] Mako
 - [ ] Wlogout
-- [ ] Wofi
+- [X] Wofi
 - [ ] Wallpapers
 - [ ] Waypaper
