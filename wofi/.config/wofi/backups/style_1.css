@@ -1,7 +1,7 @@
 @import "/home/alan/.cache/wal/colors-waybar.css";
 window {
 margin: 0px;
-border: 1px solid @color11;
+border: 1px solid @color12;
 border-radius: 10px;
 background-color: @background;
 }
@@ -9,7 +9,7 @@ background-color: @background;
 margin: 5px;
 border: none;
 border-radius: 10px;
-color: @color11;
+color: @foreground;
 background-color: @background;
 }
 
@@ -36,7 +36,7 @@ border: none;
 #text {
 margin: 5px;
 border: none;
-color: @color11;
+color: @foreground;
 } 
 
 #entry.activatable #text {
@@ -48,7 +48,7 @@ color: @color3;
 }
 
 #entry:selected {
-background-color: @color11;
+background-color: @color8;
 border-radius: 10px;
 }
 

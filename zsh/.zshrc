@@ -2,7 +2,8 @@ autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 alias l="eza -lah"
-alias nvimf="nvim ./"
+alias n="nvim"
+alias nf="nvim ./"
 alias ls="eza"
 alias q="yay -Qi"
 alias lg='lazygit'
