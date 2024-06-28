@@ -1,4 +1,9 @@
 @import "/home/alan/.cache/wal/colors-waybar.css";
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: JetBrains Mono;
+    font-size: 15px;
+}
 window {
 margin: 0px;
 border: 1px solid @color11;

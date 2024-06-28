@@ -2,6 +2,7 @@ autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 alias l="eza -lah"
+alias vtop="vtop --theme wizard"
 alias n="nvim"
 alias nf="nvim ./"
 alias ls="eza"
