@@ -85,7 +85,7 @@
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         // "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "on-click": "kitty nmtui"
+        "on-click": "hyprctl dispatch -- exec '[float]' kitty --hold nmtui"
     },
     "bluetooth": {
         "format": "  ",
