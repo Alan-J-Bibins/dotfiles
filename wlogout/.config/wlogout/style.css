@@ -1,0 +1,70 @@
+@import '../../.cache/wal/colors-waybar.css';
+* {
+	background-image: none;
+    transition: 150ms;
+	box-shadow: none;
+}
+
+window {
+	background-color: rgba(12, 12, 12, 0.6);
+}
+
+button {
+    color: #FFFFFF;
+    background-color: @background;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25%;
+    border: none;
+	border-radius: 10px;
+	outline-style: none;
+}
+
+button:hover {
+    background-size: 30%;
+    background-color: @color11
+}
+
+#lock {
+    background-image: image(url("icons/lock.png"));
+    border-radius: 5px 0px 0px 0px;
+    margin : 100px 0px 0px 525px;
+}
+
+#logout {
+    background-image: image(url("icons/logout.png"));
+    border-radius: 0px 0px 0px 5px;
+    margin : 0px 0px 100px 525px;
+}
+
+#shutdown {
+    background-image: image(url("icons/shutdown.png"));
+    border-radius: 0px 5px 0px 0px;
+    margin : 100px 550px 0px 0px;
+}
+
+#reboot {
+    background-image: image(url("icons/reboot.png"));
+    border-radius: 0px 0px 5px 0px;
+    margin : 0px 550px 100px 0px;
+}
+
+button:hover#lock {
+    border-radius: 10px 10px 0px 10px;
+    margin : 80px 0px 0px 500px;
+}
+
+button:hover#reboot {
+    border-radius: 0px 10px 10px 10px;
+    margin: 0px 530px 80px 0px;
+}
+
+button:hover#logout {
+    border-radius: 10px 0px 10px 10px;
+    margin : 0px 0px 80px 500px;
+}
+
+button:hover#shutdown {
+    border-radius: 10px 10px 10px 0px;
+    margin : 80px 530px 0px 0px;
+}
