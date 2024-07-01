@@ -1,7 +1,7 @@
 @import "/home/alan/.cache/wal/colors-waybar.css";
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: JetBrains Mono;
+    font-family: JetBrains Mono Nerd Font;
     font-size: 15px;
 }
 window {
