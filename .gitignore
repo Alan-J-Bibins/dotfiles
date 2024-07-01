@@ -1,1 +1,6 @@
 .zsh_history
+zsh/.zsh/plugins/fsh
+zsh/.zsh/plugins/zsh-autosuggestions
+zsh/.zsh/plugins/zsh-completions
+zsh/.zsh/plugins
+waypaper/.config/waypaper
