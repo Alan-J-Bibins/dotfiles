@@ -2,18 +2,22 @@ autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 alias l="eza -lah"
-alias vtop="vtop --theme wizard"
 alias n="nvim"
 alias nf="nvim ./"
 alias ls="eza"
+alias gpus='lspci -k | grep -A 2 -E "(VGA|3D)"'
+
 alias q="yay -Qi"
+alias i="yay -S"
+alias s='yay -Ss'
+
 alias lg='lazygit'
 alias reloadwaybar='killall -SIGUSR2 waybar'
-alias s='yay -Ss'
 alias tsl='sudo -E timeshift-launcher'
 alias ff='clear && fastfetch'
 export ZSH=$HOME/.zsh
 export EDITOR="/usr/bin/nvim"
+export TERMINAL="/usr/bin/kitty"
 
 #yazi
 function y() {
@@ -47,7 +51,7 @@ setopt HIST_FIND_NO_DUPS
 
 
 #zdharma's fast highlighting
-source ~/.zsh/plugins/fsh/fast-syntax-highlighting.plugin.zsh
+source ~/.zsh/plugins/fsh/F-Sy-H.plugin.zsh
 
 #zsh-users' autosuggestion
 source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
@@ -59,7 +63,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 eval "$(zoxide init zsh)"
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/themes/negligible.omp.json)"
+eval "$(oh-my-posh init zsh --config /usr/share/oh-my-posh/themes/negligible.omp.json)"
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
@@ -72,3 +76,4 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
