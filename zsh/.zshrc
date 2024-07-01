@@ -1,3 +1,10 @@
+#Folder structure for zsh
+#.
+# ├── .zsh
+# │   ├── plugins #has zsh-completions, zsh-autosuggestions, fzf.plugin.zsh and fsh
+# │   └── .zsh_history
+# └── .zshrc
+
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
@@ -6,6 +13,7 @@ alias n="nvim"
 alias nf="nvim ./"
 alias ls="eza"
 alias gpus='lspci -k | grep -A 2 -E "(VGA|3D)"'
+alias clera="clear"
 
 alias q="yay -Qi"
 alias i="yay -S"
