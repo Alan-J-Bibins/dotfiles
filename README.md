@@ -19,12 +19,12 @@
 
 ### Files to be added to dotfiles
 - [X] Hyprland
-- [x] Kitty
-- [x] Zsh
-- [ ] Pywal
+- [X] Kitty
+- [X] Zsh
+- [X] Pywal
 - [X] Waybar
 - [ ] Mako
-- [ ] Wlogout
+- [X] Wlogout
 - [X] Wofi
 - [ ] Wallpapers
-- [ ] Waypaper
+- [X] Waypaper (NOTE: DO NOT USE STOW ON THIS, CONFIG.INI IS SUPPOSED TO BE COPIED MANUALLY)
