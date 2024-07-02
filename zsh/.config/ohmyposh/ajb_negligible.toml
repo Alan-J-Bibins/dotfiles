@@ -89,7 +89,7 @@ version = 2
     style = 'powerline'
     foreground = 'lightGreen'
     foreground_templates = ['{{ if gt .Code 0 }}red{{ end }}']
-    template = ' '
+    template = ' '
 
     [blocks.segments.properties]
       always_enabled = true
