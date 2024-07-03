@@ -23,6 +23,8 @@ alias lg='lazygit'
 alias reloadwaybar='killall -SIGUSR2 waybar'
 alias tsl='sudo -E timeshift-launcher'
 alias ff='clear && fastfetch'
+alias searchfont='fc-list | rg -i'
+
 export ZSH=$HOME/.zsh
 export EDITOR="/usr/bin/nvim"
 export TERMINAL="/usr/bin/kitty"
