@@ -5,7 +5,7 @@
 1. Hyprland as the window manager
 1. SDDM as my display manager
 1. Waybar as the status bar
-1. Mako as the  notification daemon
+1. Swaync as the  notification daemon (Previously Used Mako, config for that will be included too, but only use either mako or swaync, not both at the same time)
 1. kitty as my terminal
 1. Pywal for generating colorschemes
 1. Waybar as the status bar
@@ -23,7 +23,8 @@
 - [X] Zsh
 - [X] Pywal
 - [X] Waybar
-- [ ] Mako
+- [X] Mako
+- [X] Sway
 - [X] Wlogout
 - [X] Wofi
 - [ ] Wallpapers
