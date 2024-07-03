@@ -4,7 +4,7 @@
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: JetBrains Mono Nerd Font;
     font-size: 15px;
-    font-weight:bold;
+    font-weight:bolder;
 }
 window#waybar {
     background-color: transparent;
