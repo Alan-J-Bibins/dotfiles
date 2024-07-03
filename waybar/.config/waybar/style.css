@@ -23,8 +23,12 @@ window#waybar {
     border-radius: 10px;
     padding:0px 15px 0px;
     transition-property:padding;
+    transition-property:border;
     transition-duration: .25s;
-    color: @background;
+    color: @foreground;
+    border-bottom: 4px solid @foreground;
+    border-right: 1px solid @foreground;
+    border-left: 1px solid @foreground;
 }
 
 #workspaces {
