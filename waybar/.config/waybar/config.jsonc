@@ -76,7 +76,8 @@
         "format-alt": " {time} {icon} ",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+        "on-click": "hyprctl dispatch -- exec '[float]' python3 ~/.local/share/Unofficial-Dell-Command-Configure-GUI/main.py"
     },
     "network": {
         "format-wifi": "  ",
@@ -91,7 +92,7 @@
         "format": "  ",
         "tooltip-format": " {num_connections} connections ",
         "format-connected-battery": "  {device_battery_percentage} ",
-        "on-click": "overskride"
+        "on-click": "hyprctl dispatch -- exec '[float]' blueman-manager"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -99,7 +100,7 @@
         "format-bluetooth": "{volume}% {icon}  {format_source}",
         "format-bluetooth-muted": " {icon}  {format_source}",
         "format-muted": " {format_source}",
-        "format-source": " {volume}% ",
+        "format-source": " {volume}%  ",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
