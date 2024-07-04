@@ -9,32 +9,32 @@
 window#waybar {
     background-color: transparent;
     border-bottom: transparent;
-    color: @color11;
+    color: @color3;
 }
 
 #workspaces button {
-    color: @color11;
+    color: @color3;
     margin-left:2px;
     margin-right:2px;
 }
 
 #workspaces button.active {
-    background-color: @color11;
+    background-color: @background;
     border-radius: 10px;
     padding:0px 15px 0px;
     transition-property:padding;
     transition-property:border;
     transition-duration: .25s;
-    color: @foreground;
-    border-bottom: 4px solid @foreground;
-    border-right: 1px solid @foreground;
-    border-left: 1px solid @foreground;
+    color: @color1;
+    border-bottom: 4px solid @color1;
+    border-right: 1px solid @color1;
+    border-left: 1px solid @color1;
 }
 
 #workspaces {
     margin: 2px;
     background-color: @background;
-    color: @color11;
+    color: @color3;
 }
 
 .modules-left {
@@ -43,12 +43,12 @@ window#waybar {
     background-color: @background;
     padding: 0px 10px 0px;
     border-radius: 10px;
-    border: @color11 solid 1px;
+    border: @color3 solid 1px;
 }
 
 .modules-center {
     margin-right: 12px;
-    border: @color11 solid 1px;
+    border: @color3 solid 1px;
     padding: 0px 10px 0px;
     margin-left: 12px;
     background-color: @background;
@@ -56,7 +56,7 @@ window#waybar {
 }
 
 .modules-right {
-    border: @color11 solid 1px;
+    border: @color3 solid 1px;
     padding: 0px 10px 0px;
     background-color: @background;
     margin-right: 12px;
