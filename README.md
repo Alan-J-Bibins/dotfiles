@@ -6,6 +6,7 @@
 1. SDDM as my display manager
 1. Waybar as the status bar
 1. Swaync as the  notification daemon (Previously Used Mako, config for that will be included too, but only use either mako or swaync, not both at the same time)
+1. Avizo as a notification daemon for when volume or brightness is changed
 1. kitty as my terminal
 1. Pywal for generating colorschemes
 1. Waybar as the status bar
@@ -24,7 +25,8 @@
 - [X] Pywal
 - [X] Waybar
 - [X] Mako
-- [X] Sway
+- [X] Swaync
+- [X] Avizo
 - [X] Wlogout
 - [X] Wofi
 - [ ] Wallpapers
