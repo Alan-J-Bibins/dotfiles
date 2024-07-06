@@ -31,3 +31,9 @@
 - [X] Wofi
 - [ ] Wallpapers
 - [X] Waypaper (NOTE: DO NOT USE STOW ON THIS, CONFIG.INI IS SUPPOSED TO BE COPIED MANUALLY)
+
+Small Note to myself if I have to install this on endeavouros again: Make sure locale has utf 8, if not, make sure it is there in /etc/locale.conf, then run
+```
+unset lang
+source /etc/profile.d/locale.sh
+```

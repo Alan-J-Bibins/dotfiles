@@ -61,7 +61,8 @@ setopt HIST_FIND_NO_DUPS
 
 
 #zdharma's fast highlighting
-source ~/.zsh/plugins/fsh/F-Sy-H.plugin.zsh
+#source ~/.zsh/plugins/fsh/F-Sy-H.plugin.zsh
+source ~/.zsh/plugins/fsh/fast-syntax-highlighting.plugin.zsh
 
 #zsh-users' autosuggestion
 source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
