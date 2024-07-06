@@ -4,6 +4,10 @@
 # │   ├── plugins #has zsh-completions, zsh-autosuggestions, fzf.plugin.zsh and fsh
 # │   └── .zsh_history
 # └── .zshrc
+# zsh-completions : https://github.com/zsh-users/zsh-completions
+# zsh-autosuggestions: https://github.com/zsh-users/zsh-autosuggestions
+# fsh: https://github.com/zdharma/fast-syntax-highlighting
+# fzf: https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/fzf/fzf.plugin.zsh
 
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -61,8 +65,8 @@ setopt HIST_FIND_NO_DUPS
 
 
 #zdharma's fast highlighting
-#source ~/.zsh/plugins/fsh/F-Sy-H.plugin.zsh
-source ~/.zsh/plugins/fsh/fast-syntax-highlighting.plugin.zsh
+source ~/.zsh/plugins/fsh/F-Sy-H.plugin.zsh
+# source ~/.zsh/plugins/fsh/fast-syntax-highlighting.plugin.zsh
 
 #zsh-users' autosuggestion
 source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
