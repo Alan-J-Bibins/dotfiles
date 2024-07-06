@@ -122,7 +122,7 @@
         }
     },
     "custom/archlogo": {
-        "format": " ",
+        "format": " ",
         "on-click":"hyprctl dispatch -- exec '[float]' kitty --hold fastfetch"
     },
     "custom/power":{
