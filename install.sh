@@ -11,7 +11,7 @@ read -r -p "Proceed with Installation? [y/N]" -n 1
 if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     sleep 2
     echo "Operation continues"
-    yay -S --needed hyprland hyprlock cpio xorg-xhost hyprwayland-scanner xdg-desktop-portal xdg-desktop-portal-hyprland wl-clipboard nwg-look qt5-wayland qt6-wayland qt5ct qt6ct kvantum swaync kvantum-theme-materia materia-kde materia-gtk-theme kvantum-qt5 cliphist swww unzip ripgrep fd atuin fzf lazygit python-pip bluez bluez-utils pamixer brightnessctl blueman pavucontrol grim vlc waybar wofi waypaper bibata-cursor-theme oh-my-posh satty-bin avizo wlogout kitty zsh papirus-icon-theme thunar python-pywalfox
+    yay -S --needed hyprland hyprlock cpio xorg-xhost hyprwayland-scanner xdg-desktop-portal xdg-desktop-portal-hyprland wl-clipboard nwg-look qt5-wayland qt6-wayland qt5ct qt6ct kvantum swaync kvantum-theme-materia materia-kde materia-gtk-theme kvantum-qt5 cliphist swww unzip ripgrep fd atuin fzf lazygit python-pip bluez bluez-utils pamixer brightnessctl blueman pavucontrol grim vlc waybar wofi waypaper bibata-cursor-theme oh-my-posh satty-bin avizo wlogout kitty zsh papirus-icon-theme thunar python-pywalfox tumbler ffmpegthumbnailer
 
     
     echo "Checking if everything was installed properly using the '--needed' flag of yay"
