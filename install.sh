@@ -1,16 +1,2 @@
-#!/bin/bash
 
-#List of applications to install:
-programs=("atuin","fzf","yazi","zoxide","eza","oh-my-posh","jq", "lazygit", "btop", "python-pywal", "python-pip")
-
-for program in "${programs[@]}"; do
-	if yay -Qs "$program" > /dev/null 2?&1; then
-		echo "$program is already installed."
-	else
-		yay -S "$program"
-	fi
-done
-
-echo "Installation of essential terminal programs completed! :D"
-
-# other applications that are not on yay or pacman : nvm
+yay -S --needed hyprland hyprlock cpio xorg-xhost hyprwayland-scanner xdg-desktop-portal xdg-desktop-portal-hyprland wl-clipboard nwg-look qt5-wayland qt6-wayland qt5ct qt6ct kvantum swaync kvantum-theme-materia materia-kde materia-gtk-theme kvantum-qt5 cliphist swww unzip ripgrep bluez bluez-utils pamixer brightnessctl blueman pavucontrol grim vlc waybar wofi waypaper bibata-cursor-theme oh-my-posh satty-bin avizo wlogout kitty zsh papirus-icon-theme thunar python-pywalfox fd
