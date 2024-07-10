@@ -43,3 +43,7 @@ Another Note: Post command used in waypaper
 post_command = wal -i $wallpaper && cp ~/.cache/wal/colors-btop-pywal.theme ~/.config/btop/themes/ && killall -SIGUSR2 waybar && swaync-client -rs && notify-send "Testing.." && pywalfox update && cp $wallpaper /home/alan/Pictures/wallpaper.png
 
 ```
+
+
+## Instructions to myself after fresh install
+
