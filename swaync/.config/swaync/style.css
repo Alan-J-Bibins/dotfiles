@@ -15,7 +15,7 @@
 @define-color bg-selected @color1;
 
 * {
-    font-family: Cantarell;
+    font-family: Inter;
 }
 .notification-row {
   outline: none;
