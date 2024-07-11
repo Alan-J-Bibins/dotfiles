@@ -341,7 +341,7 @@
 
 .widget-dnd > switch {
   font-size: initial;
-  border-radius: 12px;
+  border-radius: 15px;
   background: @noti-bg;
   border: 1px solid @noti-border-color;
   box-shadow: none;
@@ -352,7 +352,7 @@
 }
 
 .widget-dnd > switch slider {
-  background: @noti-bg-hover;
+  background: @text-color;
   border-radius: 12px;
 }
 
