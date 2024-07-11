@@ -22,6 +22,7 @@ alias clera="clear"
 alias q="yay -Qi"
 alias i="yay -S"
 alias s='yay -Ss'
+alias yeet='yay -R'
 
 alias lg='lazygit'
 alias reloadwaybar='killall -SIGUSR2 waybar'
