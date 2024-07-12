@@ -1,0 +1,12 @@
+avizo
+bauh
+bibata-cursor-theme
+getnf
+hyprpicker
+oh-my-posh
+python-pywalfox
+satty-bin
+waypaper
+wlogout
+yay
+yay-debug
