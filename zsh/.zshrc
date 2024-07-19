@@ -18,6 +18,7 @@ alias nf="nvim ./"
 alias ls="eza"
 alias gpus='lspci -k | grep -A 2 -E "(VGA|3D)"'
 alias clera="clear"
+alias update='yay -Syu --disable-download-timeout'
 
 alias q="yay -Qi"
 alias i="yay -S"
