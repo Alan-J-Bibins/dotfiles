@@ -15,13 +15,13 @@
         "hyprland/window"
     ],
     "modules-right": [
+        "tray",
         "pulseaudio",
         "network",
         "bluetooth",
         "backlight",
         "battery",
-        "clock",
-        "tray"
+        "clock"
     ],
     "tray": {
         // "icon-size": 21,
