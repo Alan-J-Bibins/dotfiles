@@ -17,7 +17,6 @@
     "modules-right": [
         "tray",
         "pulseaudio",
-        "bluetooth",
         "backlight",
         "battery",
         "clock"
