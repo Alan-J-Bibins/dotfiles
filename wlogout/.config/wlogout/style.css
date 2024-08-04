@@ -22,7 +22,7 @@ button {
 
 button:hover {
     background-size: 30%;
-    background-color: @color11
+    background-color: @color1
 }
 
 #lock {
