@@ -11,7 +11,7 @@ read -r -p "Proceed with Installation? [y/N]" -n 1
 if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     sleep 2
     echo "Operation continues"
-    yay -S --needed hyprland hyprlock cpio xorg-xhost hyprwayland-scanner xdg-desktop-portal xdg-desktop-portal-hyprland wl-clipboard nwg-look qt5-wayland qt6-wayland qt5ct qt6ct kvantum swaync kvantum-theme-materia materia-kde materia-gtk-theme kvantum-qt5 cliphist swww unzip ripgrep fd atuin fzf lazygit python-pip bluez bluez-utils pamixer brightnessctl blueman pavucontrol grim vlc waybar wofi waypaper bibata-cursor-theme oh-my-posh satty-bin avizo wlogout kitty zsh papirus-icon-theme thunar python-pywalfox tumbler ffmpegthumbnailer hyprpicker jq slurp libsmbios yt-dlp aria2
+    yay -S --needed hyprland hyprlock cpio xorg-xhost hyprwayland-scanner xdg-desktop-portal xdg-desktop-portal-hyprland wl-clipboard nwg-look qt5-wayland qt6-wayland qt5ct qt6ct kvantum swaync kvantum-theme-materia materia-kde materia-gtk-theme kvantum-qt5 cliphist swww unzip ripgrep fd atuin fzf lazygit python-pip bluez bluez-utils pamixer brightnessctl blueman pavucontrol grim vlc waybar wofi waypaper bibata-cursor-theme oh-my-posh satty-bin avizo wlogout kitty zsh papirus-icon-theme thunar python-pywalfox tumbler ffmpegthumbnailer hyprpicker jq slurp libsmbios yt-dlp aria2 zathura zathura-pdf-mupdf
 
     
     echo "Checking if everything was installed properly using the '--needed' flag of yay"
@@ -88,16 +88,16 @@ if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     yay -S --needed ripgrep
     sleep 2
     echo "..."
-    yay -S atuin 
+    yay -S --needed atuin 
     sleep 2
     echo "..."
-    yay -S fzf 
+    yay -S --needed fzf 
     sleep 2
     echo "..."
-    yay -S lazygit 
+    yay -S --needed lazygit 
     sleep 2
     echo "..."
-    yay -S python-pip
+    yay -S --needed python-pip
     sleep 2
     echo "..."
     yay -S --needed bluez
@@ -172,22 +172,22 @@ if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     yay -S --needed thunar 
     sleep 2
     echo "..."
-    yay -S python-pywalfox
+    yay -S --needed python-pywalfox
     sleep 2
     echo "..."
-    yay -S tumbler
+    yay -S --needed tumbler
     sleep 2
     echo "..."
-    yay -S ffmpegthumbnailer
+    yay -S --needed ffmpegthumbnailer
     sleep 2
     echo "..."
-    yay -S hyprpicker
+    yay -S --needed hyprpicker
     sleep 2
     echo "..."
-    yay -S jq
+    yay -S --needed jq
     sleep 2
     echo "..."
-    yay -S slurp
+    yay -S --needed slurp
     sleep 2
     echo "..."
     echo "Checking completed!!! Please set SDDM as the display manager using 'sudo systemctl enable sddm.service'!!!"
