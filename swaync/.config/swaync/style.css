@@ -57,7 +57,7 @@
   border: 1px solid @noti-border-color;
   padding: 0;
   transition: background 0.15s ease-in-out;
-  background: alpha(@noti-bg,0.75);
+  background: alpha(@noti-bg,0.5);
 }
 
 .notification-row .notification-background .notification.low {
