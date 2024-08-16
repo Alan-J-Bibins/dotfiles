@@ -57,7 +57,7 @@
   border: 1px solid @noti-border-color;
   padding: 0;
   transition: background 0.15s ease-in-out;
-  background: alpha(@noti-bg,0.5);
+  background: alpha(@noti-bg,0.65);
 }
 
 .notification-row .notification-background .notification.low {
@@ -266,11 +266,10 @@
 
 .control-center {
   /* The Control Center which contains the old notifications + widgets */
-  background: @cc-bg;
+  background: alpha(@cc-bg, 0.75);
   color: @text-color;
   border: solid @noti-border-color 1px;
   border-radius: 10px;
-  opacity: 0.95;
 }
 
 .control-center .control-center-list-placeholder {
