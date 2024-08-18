@@ -121,7 +121,7 @@
     },
     "custom/archlogo": {
         "format": " ",
-        "on-click":"hyprctl dispatch -- exec '[float]' kitty --hold fastfetch"
+        "on-click":"hyprctl dispatch exec '[float] kitty --hold fastfetch' ; sleep 0.1 ; hyprctl dispatch resizeactive exact 960 512 "
     },
     "custom/power":{
         "format":"  ",
