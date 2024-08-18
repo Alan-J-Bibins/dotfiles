@@ -1,0 +1,84 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source":"~/.config/fastfetch/arch.txt",
+        "padding": {
+            "top": 2,
+            "right": 6,
+            "left": 6
+        }
+    },
+    "display": {
+        "separator": "   "
+    },
+    "modules": [
+
+        "break",
+        "break",
+
+        {
+            "type": "title",
+            "keyWidth": "10",
+            "color": {
+                "user": "33",  // = color2
+                "at": "36",
+                "host": "33"
+            }
+        },
+        {
+            "type": "custom",
+            "format": "======================================="
+        },
+
+        {
+            "type": "os",
+            "key": "os    ",
+            "keyColor": "33"  // = color3
+        },
+        {
+            "type": "kernel",
+            "key": "kernel",
+            "keyColor": "33"
+        },
+        {
+            "type": "wm",
+            "format": "{1}",
+            "key": "wm    ",
+            "keyColor": "33"
+        },
+        {
+            "type": "packages",
+            "format": "{} [pacman]",
+            "key": "pkgs  ",
+            "keyColor": "33"
+        },
+        {
+            "type": "uptime",
+            "format": "{2}h {3}m",
+            "key": "uptime",
+            "keyColor": "33"
+        },
+        {
+            "type": "memory",
+            "key": "memory",
+            "format": "{1} / {2} [{3}]",
+            "keyColor": "33"
+        },
+        {
+            "type": "disk",
+            "format": "{1} / {2} [{3}]",
+            "key": "disk  ",
+            "keyColor": "33"
+        },
+        {
+            "type": "terminal",
+            "key": "term  ",
+            "keyColor": "33"
+        },
+        {
+            "type": "colors",
+            "symbol": "square"
+        },
+        "custom"
+    ]
+}
