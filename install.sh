@@ -16,7 +16,7 @@ if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     echo "Please make sure that you pay close attention to what is happening as the applications and packages are installed.."
     sleep 1
     yay -S --needed hyprland hyprlock cpio xorg-xhost hyprwayland-scanner xdg-desktop-portal xdg-desktop-portal-hyprland wl-clipboard nwg-look qt5-wayland qt6-wayland qt5ct qt6ct kvantum swaync kvantum-theme-materia materia-kde materia-gtk-theme kvantum-qt5 cliphist swww unzip ripgrep fd atuin fzf lazygit python-pip bluez bluez-utils pamixer brightnessctl blueman pavucontrol grim vlc waybar wofi waypaper bibata-cursor-theme oh-my-posh satty-bin avizo wlogout kitty zsh papirus-icon-theme thunar python-pywalfox tumbler ffmpegthumbnailer hyprpicker jq slurp libsmbios yt-dlp aria2 zathura zathura-pdf-mupdf pacman-contrib mpd playerctl wev thunar-archive-plugin
-    
+
     echo "Checking if everything was installed properly using the '--needed' flag of yay"
     sleep 2
     echo "..."
@@ -196,27 +196,44 @@ if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     yay -S --needed slurp
     sleep 2
     echo "..."
-    echo "Checking completed!!! Please set SDDM as the display manager using 'sudo systemctl enable sddm.service'!!!"
+    echo "Checking completed!!!"
 else
     echo "Installation did not proceed. Nothing has been installed!"
     sleep 2
-fi
+    fi
 
-read -r -p "Create initial pywal colorscheme using the provided wallpaper? (Please make sure that all config files have been stowed before running this) [y/N]: " -n 1
-echo ""
+    read -r -p "Create initial pywal colorscheme using the provided wallpaper? (Please make sure that all config files have been stowed before running this) [y/N]: " -n 1
+    echo ""
 
-if [[ "$REPLY" =~ ^[Yy]$ ]]; then
-    sleep 2
-    echo "..."
-    sleep 2
-    echo "Creating pywal colorscheme"
-    wal -i ./City-Rain.png
-else
-    sleep 2
-    echo "Colorscheme has not been generated!"
-fi
+    if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+        sleep 2
+        echo "..."
+        sleep 2
+        echo "Creating pywal colorscheme"
+        wal -i ./City-Rain.png
+    else
+        sleep 2
+        echo "Colorscheme has not been generated!"
+    fi
+
+    read -r -p "Run Post Installation Commands? [y/N]: " -n 1
+    echo ""
+
+    if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+        echo "Copying waypaper config.ini file to respective directory ..."
+        cp ./config.ini ~/.config/waypaper/
+        sleep 1
+        echo "Enabling sddm..."
+        sleep 1
+        sudo systemctl enable sddm.service
+        echo "Installing pywalfox daemon ..."
+        sleep 1
+        pywalfox install
+
+    else
+        sleep 2
+        echo "Skipping Post Installation Commands"
+    fi
 
 
-echo "Copying waypaper config.ini file to respective directory"
-cp config.ini ~/.config/waypaper/
-echo "CIAO!"
+echo "ENJOY!"
