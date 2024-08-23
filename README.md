@@ -26,14 +26,18 @@ source /etc/profile.d/locale.sh
 
 Another Note: Post command used in waypaper 
 ```
-post_command = wal -i $wallpaper && cp ~/.cache/wal/colors-btop-pywal.theme ~/.config/btop/themes/ && killall -SIGUSR2 waybar && swaync-client -rs && notify-send "Testing.." && pywalfox update && cp $wallpaper /home/alan/Pictures/wallpaper.png
+post_command = bash ~/.config/waypaper/post_commands.sh $wallpaper
 
 ```
+Removed the previously used stupidly-long post_command and moved all of it to a bash script file which i can modify more easily
 
 ## Instructions to myself after a fresh install
 
 1. Setup yay
-1. Install gnu stow and use it to stow the folders
+1. `git clone https://github.com/Alan-J-Bibins/dotfiles`
+1. `cd dotfiles`
+1. Install gnu stow and use it to stow all folders except `fonts`
+1. Install the `Inter` font provided in the `fonts` folder
 1. Run `./install.sh` and follow the instructions
-1. Copy the waypaper config file to `~/.config/waypaper/config.ini`, DO NOT STOW IT
+1. Copy wallpapers from `https://drive.google.com/drive/folders/13c9e27zigqFp0Hj9F0mF-VDx1KBscWS1?usp=sharing` into `~/Pictures/Wallpapers`
 1. Reboot

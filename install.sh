@@ -6,7 +6,8 @@
 # |___|_| |_|___/\__\__,_|_|_| |_| |_|\__, | .__/|_|  \__,_|\___/ \__|___/
 #                                     |___/|_|                            
 
-read -r -p "Proceed with Installation? [y/N]" -n 1
+read -r -p "Proceed with Installation? [y/N]: " -n 1
+echo ""
 
 if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     sleep 1
@@ -201,7 +202,8 @@ else
     sleep 2
 fi
 
-read -r -p "Create initial pywal colorscheme using the provided wallpaper? (Please make sure that all config files have been stowed before running this) [y/N]" -n 1
+read -r -p "Create initial pywal colorscheme using the provided wallpaper? (Please make sure that all config files have been stowed before running this) [y/N]: " -n 1
+echo ""
 
 if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     sleep 2
@@ -214,5 +216,7 @@ else
     echo "Colorscheme has not been generated!"
 fi
 
-echo "Please copy the waypaper config file to the respective directory"
+
+echo "Copying waypaper config.ini file to respective directory"
+cp config.ini ~/.config/waypaper/
 echo "CIAO!"

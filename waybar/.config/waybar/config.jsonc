@@ -122,9 +122,9 @@
     "hyprland/window": {
         "format": "{}",
         "rewrite": {
-            "(.*) - zsh": " $1",
+            "~(.*)": "  ~$1",
             "(.*) — Mozilla Firefox": "  $1",
-            "nvim(.*)": "$1"
+            "nvim": "nvim"
         },
         "separate-outputs": true
     },
