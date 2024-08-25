@@ -36,7 +36,7 @@ Removed the previously used stupidly-long post_command and moved all of it to a 
 1. Setup yay
 1. `git clone https://github.com/Alan-J-Bibins/dotfiles`
 1. `cd dotfiles`
-1. Install gnu stow and use it to stow all folders except `fonts`
+1. Install gnu stow and use it to stow all folders except `fonts` and `VesktopTheme`
 1. Install the `Inter` font provided in the `fonts` folder
 1. Run `./install.sh` and follow the instructions
 1. Copy wallpapers from `https://drive.google.com/drive/folders/13c9e27zigqFp0Hj9F0mF-VDx1KBscWS1?usp=sharing` into `~/Pictures/Wallpapers`

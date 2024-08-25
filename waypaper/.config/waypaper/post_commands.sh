@@ -11,3 +11,4 @@ pywalfox update
 bash ~/.config/spicetify/Themes/Pywal/update-colors.sh 
 spicetify apply
 cp ~/.cache/wal/colors-vesktop.css ~/.config/vesktop/themes/pywal-vesktop.theme.css
+python3 ~/dotfiles/VesktopTheme/accentValVesktop.py

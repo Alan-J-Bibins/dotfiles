@@ -20,6 +20,7 @@ alias gpus='lspci -k | grep -A 2 -E "(VGA|3D)"'
 alias clera="clear"
 alias update='yay -Syu --disable-download-timeout'
 alias storage="df -h | grep 'Filesystem\|nvme'"
+alias py='python3'
 
 alias yt-dlp-aria="yt-dlp --downloader aria2c --downloader-args '-c -j 3 -x 3 -s 3 -k 1M'"
 
