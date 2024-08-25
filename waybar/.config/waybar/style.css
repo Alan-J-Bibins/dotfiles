@@ -12,14 +12,22 @@ window#waybar {
     color: @color3;
 }
 
+#workspaces {
+    margin: 2px;
+    background-color: transparent;
+    color: @color3;
+}
+
+
 #workspaces button {
+    background-color: transparent;
     color: @color3;
     margin-left:2px;
     margin-right:2px;
 }
 
 #workspaces button.active {
-    background-color: @background;
+    background-color: transparent;
     border-radius: 10px;
     padding:0px 15px 0px;
     transition-property:padding;
@@ -31,16 +39,11 @@ window#waybar {
     border-left: 1px solid @color1;
 }
 
-#workspaces {
-    margin: 2px;
-    background-color: @background;
-    color: @color3;
-}
 
 .modules-left {
     margin-left: 5px;
-    background-color: @background;
     padding: 0px 10px 0px;
+    background-color: alpha(@background,0.75);
     border-radius: 10px;
     border: @color3 solid 1px;
 }
@@ -48,14 +51,14 @@ window#waybar {
 .modules-center {
     border: @color3 solid 1px;
     padding: 0px 10px 0px;
-    background-color: @background;
+    background-color: alpha(@background,0.75);
     border-radius: 10px;
 }
 
 .modules-right {
     border: @color3 solid 1px;
     padding: 0px 10px 0px;
-    background-color: @background;
+    background-color: alpha(@background,0.75);
     margin-right: 5px;
     border-radius: 10px;
 }
