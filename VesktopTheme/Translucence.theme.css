@@ -1,8 +1,8 @@
 /**
- * @name Translucence
- * @version 1.0.6.3
- * @description A translucent/frosted glass Discord theme
- * @author CapnKitten
+ * @name Translucence Modified
+ * @version 1
+ * @description A translucent/frosted glass Discord theme, modified for pywal
+ * @author Alan J Bibins, Original theme by CapnKitten
  *
  * @website http://github.com/CapnKitten
  * @source https://github.com/CapnKitten/BetterDiscord/blob/master/Themes/Translucence/css/source.css
@@ -34,7 +34,7 @@
 	
 	--reply-hue: 235;
 	--reply-saturation: 85%;
-	--reply-lightness: 70%;
+	--reply-lightness: 66%;
 	--reply-opacity: 1; /*	-	*/
 
 	--textarea-color: 255,255,255;

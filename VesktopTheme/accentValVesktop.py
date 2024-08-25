@@ -28,6 +28,11 @@ with open(sourceCss, 'r') as file:
 css_content = css_content.replace('--accent-hue: 235;', f'--accent-hue: {accent_hsl[0]:.0f};')
 css_content = css_content.replace('--accent-saturation: 85%;', f'--accent-saturation: {accent_hsl[1]:.0f}%;')
 css_content = css_content.replace('--accent-lightness: 66%;', f'--accent-lightness: {accent_hsl[2]:.0f}%;')
+css_content = css_content.replace('--reply-hue: 235;', f'--reply-hue: {accent_hsl[0]:.0f};')
+css_content = css_content.replace('--reply-saturation: 85%;', f'--reply-saturation: {accent_hsl[1]:.0f}%;')
+css_content = css_content.replace('--reply-lightness: 66%;', f'--reply-lightness: {accent_hsl[2]:.0f}%;')
+
+print(css_content)
 
 # Write the updated CSS
 newCss = os.path.expanduser('~') + "/.config/vesktop/themes/TranslucenceModified.theme.css"
