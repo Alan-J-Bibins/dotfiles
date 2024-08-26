@@ -16,7 +16,7 @@
 	--app-bg: url(file://~/Pictures/wallpaper.png);
 	--app-blur: 3px;
 	--app-margin: 0px;
-	--app-radius: 8px; /*	-	*/
+	--app-radius: 10px; /*	-	*/
 	
 	--accent-hue: 235;
 	--accent-saturation: 85%;
@@ -27,8 +27,8 @@
 	--sidebar-color: rgba(0,0,0,0.65);
 	--main-content-color: rgba(0,0,0,0.65); /*	-	*/
 
-	--message-color: rgba(0,0,0,0.1);
-	--message-radius: 8px;
+	--message-color: rgba(0,0,0,0.2);
+	--message-radius: 10px;
 	--message-padding-top: 8px;
 	--message-padding-side: 8px; /*	-	*/
 	
