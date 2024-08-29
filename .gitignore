@@ -5,3 +5,4 @@ zsh/.zsh/plugins/zsh-completions
 zsh/.zsh/plugins
 waypaper/.config/waypaper/config.ini
 accels.scm
+renamerrc
