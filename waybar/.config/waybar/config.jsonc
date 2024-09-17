@@ -16,9 +16,7 @@
     ],
     "modules-right": [
         "tray",
-        "pulseaudio",
-        "backlight",
-        "battery",
+        "group/systemstuff",
         "clock"
     ],
     "tray": {
@@ -27,12 +25,12 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "format": "{:%H:%M}",
+        "format": "{:%I:%M %p}",
         "tooltip-format": "{:%d-%m-%Y}"
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% {icon} ",
+        "format": " {percent}% {icon} ",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "mpd": {
@@ -60,6 +58,19 @@
         },
         "tooltip-format": "MPD (connected)",
         "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+    "group/systemstuff": {
+        "orientation" : "inherit",
+        "drawer" : {
+            "transition-duration": 250,
+            "children-class": "not-battery",
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "battery",
+            "pulseaudio",
+            "backlight"
+        ]
     },
     "battery": {
         "states": {
