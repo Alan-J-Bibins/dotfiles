@@ -53,7 +53,7 @@ color: @color3;
 }
 
 #entry:selected {
-background-color: @color11;
+background-color: @color1;
 border-radius: 10px;
 }
 
