@@ -1,5 +1,8 @@
 # Alan's Dotfiles
 
+> [!NOTE]
+> Install script provided is still a WIP
+
 ### Applications that I use:
 
 1. Hyprland as the window manager
