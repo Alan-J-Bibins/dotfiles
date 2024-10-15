@@ -3,11 +3,11 @@
      font-family: "Silkscreen", sans-serif;
      font-weight: 400;
      font-style: normal;
-     vertical-align: baseline;
- }
+}
 
 .zebody{
     display: flex;
+    height: 75svh;
     flex-direction: column;
     align-items: center;
     justify-content: center;

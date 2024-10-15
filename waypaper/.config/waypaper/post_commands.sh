@@ -3,7 +3,8 @@
 echo "Wallpaper being used is $1"
 wal -i $1
 cp ~/.cache/wal/colors-btop-pywal.theme ~/.config/btop/themes/
-cp ~/.cache/wal/colors.css ~/dotfiles/custom_homepage/css/colors.css
+cp ~/.cache/wal/colors.css ~/dotfiles/custom_homepage/v1/css/colors.css
+cp ~/.cache/wal/colors.css ~/dotfiles/custom_homepage/v2/css/colors.css
 cp $1 ~/Pictures/wallpaper.png
 killall -SIGUSR2 waybar 
 swaync-client -rs
