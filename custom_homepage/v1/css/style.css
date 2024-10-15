@@ -5,6 +5,10 @@
      font-style: normal;
 }
 
+body{
+    background: transparent !important;
+}
+
 .zebody{
     display: flex;
     height: 75svh;
