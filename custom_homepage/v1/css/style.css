@@ -1,15 +1,16 @@
 @import "colors.css";
- * {
-     font-family: "Silkscreen", sans-serif;
-     font-weight: 400;
-     font-style: normal;
+
+* {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-body{
-    background: transparent !important;
+body {
+    background: var(--background) !important;
 }
 
-.zebody{
+.zebody {
     display: flex;
     height: 75svh;
     flex-direction: column;
@@ -18,10 +19,15 @@ body{
 }
 
 .hello {
-     font-size: 200px;
-     text-align: center;
- }
+    color: var(--cursor);
+    font-size: 200px;
+    text-align: center;
+}
 
- .color-text{
+.how-you {
+    color: var(--cursor);
+}
+
+.color-text {
     color: var(--color3);
- }
+}
