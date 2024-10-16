@@ -8,7 +8,7 @@ cp ~/.cache/wal/colors.css ~/dotfiles/custom_homepage/v2/css/colors.css
 cp $1 ~/Pictures/wallpaper.png
 killall -SIGUSR2 waybar 
 swaync-client -rs
-notify-send -i info "Changing wallpaper and colorscheme" "Waypaper at work"
+notify-send -i dialog-information-symbolic "Changing wallpaper and colorscheme" "Waypaper at work"
 pywalfox update
 bash ~/.config/spicetify/Themes/Pywal/update-colors.sh 
 spicetify apply
