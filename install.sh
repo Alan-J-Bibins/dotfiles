@@ -9,6 +9,8 @@
 read -r -p "Proceed with Installation? [y/N]: " -n 1
 echo ""
 
+# TODO: Make nvidia envs for hyprland optional, rn its just always present so it might cause problems
+
 if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     sleep 1
     echo "Operation continues"
