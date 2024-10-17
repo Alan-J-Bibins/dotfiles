@@ -84,6 +84,11 @@ source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 #zsh-users' completion plugin
 fpath=($ZSH/plugins/zsh-completions/src $fpath)
 
+fpath=(~/.zsh/completion $fpath)
+autoload -U compinit
+compinit
+
+
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
@@ -110,3 +115,4 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH=$PATH:$HOME/Applications/
+. "/home/alan/.deno/env"
