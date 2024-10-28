@@ -42,5 +42,6 @@ Removed the previously used stupidly-long post_command and moved all of it to a 
 1. Install gnu stow and use it to stow all folders except `fonts`, `VesktopTheme` and `custom_homepage`
 1. Install the `Inter` font provided in the `fonts` folder
 1. Run `./install.sh` and follow the instructions
-1. Copy wallpapers from `https://drive.google.com/drive/folders/13c9e27zigqFp0Hj9F0mF-VDx1KBscWS1?usp=sharing` into `~/Pictures/Wallpapers`
+1. Install `getnf` and use it to install CascadiaCode and JetBrainsMono fonts
 1. Reboot
+1. Copy wallpapers from `https://drive.google.com/drive/folders/13c9e27zigqFp0Hj9F0mF-VDx1KBscWS1?usp=sharing` into `~/Pictures/Wallpapers`
