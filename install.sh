@@ -71,17 +71,26 @@ else
         sleep 1
         sudo pywalfox install
 
+        echo "Installing the Inter font provided with the dotfiles"
+        sleep 1
+        mkdir -p ~/.local/share/fonts/Inter
+        cd "$PWD"
+        cp ./fonts/Inter.zip ~/.local/share/fonts/
+        cd ~/.local/share/fonts/
+        unzip Inter.zip -d Inter/
+        fc-cache -v -f
+        rm Inter.zip
+        cd ~
+
         echo "Installing CascadiaCode and JetBrainsMono Nerd fonts using getnf"
         sleep 1
         getnf -i "CascadiaCode,JetBrainsMono"
 
         echo "Setting up zsh plugins..."
         sleep 
-        mkdir ~/.zsh
-        mkdir ~/.zsh/plugins
-        mkdir ~/.zsh/plugins/fsh
-        mkdir ~/.zsh/plugins/zsh-autosuggestions
-        mkdir ~/.zsh/plugins/zsh-completions
+        mkdir -p ~/.zsh/plugins/fsh
+        mkdir -p ~/.zsh/plugins/zsh-autosuggestions
+        mkdir -p ~/.zsh/plugins/zsh-completions
         git clone https://github.com/zdharma/fast-syntax-highlighting ~/.zsh/plugins/fsh
         git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/plugins/zsh-autosuggestions
         git clone https://github.com/zsh-users/zsh-completions ~/.zsh/plugins/zsh-completions
