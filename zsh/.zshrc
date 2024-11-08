@@ -24,8 +24,6 @@ alias py='python3'
 
 alias fixgpgme='sudo rm -r /var/lib/pacman/sync/'
 
-alias resolve_transcode='~/dotfiles/Scripts/transcode_for_resolve.sh'
-
 alias yt-dlp-aria="yt-dlp --downloader aria2c --downloader-args '-c -j 3 -x 3 -s 3 -k 1M'"
 
 alias q="yay -Qi"
@@ -115,4 +113,5 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH=$PATH:$HOME/Applications/
+export PATH=$PATH:$HOME/dotfiles/Scripts/
 . "/home/alan/.deno/env"
