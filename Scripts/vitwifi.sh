@@ -1,11 +1,26 @@
 #!/bin/bash
-echo "Enter your ID, Password and Device Name"
-read -p "Username: " ID
-read -sp"Password: " PASS
-echo
-read -p "Device: " device
 
-echo "Username: $ID\nPassword: $PASS\nDevice: $device"
+input_file="$HOME/.wifistuff"
+
+if [ $# -eq 1 ]; then
+    input_file="$1"
+fi
+
+if [ ! -f $input_file ]; then
+    echo "Error: Input file '$input_file' not found"
+    echo "Taking manual input:"
+    echo "Enter your ID, Password and Device Name"
+    read -p "Username: " ID
+    read -sp"Password: " PASS
+    echo
+    read -p "Device: " device
+else
+    read -r ID PASS device < "$input_file"
+fi
+
+echo "Username: $ID"
+echo "Password: $PASS"
+echo "Device: $device"
 
 login_request() {
 	echo "Logging in $ID!..."
