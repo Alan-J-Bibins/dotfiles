@@ -1,0 +1,95 @@
+#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+version = 2
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+
+  [[blocks.segments]]
+    type = 'os'
+    style = 'powerline'
+    foreground = 'cyan'
+    template = '{{ if .WSL }}WSL at {{ end }}{{.Icon}}'
+
+  [[blocks.segments]]
+    type = 'path'
+    style = 'plain'
+    foreground = 'cyan'
+    template = ' {{ .Path }} '
+
+    [blocks.segments.properties]
+      style = 'full'
+
+  [[blocks.segments]]
+    type = 'git'
+    style = 'plain'
+    foreground = '#F1502F'
+    template = ':: {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }} '
+
+    [blocks.segments.properties]
+      fetch_status = true
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'right'
+
+  [[blocks.segments]]
+    type = 'root'
+    style = 'plain'
+    foreground = 'red'
+    template = '| root '
+
+  [[blocks.segments]]
+    type = 'dart'
+    style = 'powerline'
+    foreground = '#06A4CE'
+    template = '|  {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} '
+
+  [[blocks.segments]]
+    type = 'node'
+    style = 'powerline'
+    foreground = '#6CA35E'
+    template = '|  {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} '
+
+  [[blocks.segments]]
+    type = 'python'
+    style = 'plain'
+    foreground = '#4584b6'
+    template = '|  {{ .Venv }} '
+
+    [blocks.segments.properties]
+      display_mode = 'context'
+      fetch_virtual_env = true
+
+  [[blocks.segments]]
+    type = 'battery'
+    style = 'powerline'
+    invert_powerline = true
+    foreground_templates = ['{{if eq "Charging" .State.String}}#4caf50{{end}}', '{{if eq "Discharging" .State.String}}#40c4ff{{end}}', '{{if eq "Full" .State.String}}#ff0000{{end}}']
+    template = '| {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}  '
+
+    [blocks.segments.properties]
+      charged_icon = ' '
+      charging_icon = ' '
+
+  [[blocks.segments]]
+    type = 'time'
+    style = 'plain'
+    foreground = 'lightGreen'
+    template = '| {{ .CurrentDate | date .Format }} '
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    type = 'status'
+    style = 'powerline'
+    foreground = 'lightGreen'
+    foreground_templates = ['{{ if gt .Code 0 }}red{{ end }}']
+    template = ' '
+
+    [blocks.segments.properties]
+      always_enabled = true
