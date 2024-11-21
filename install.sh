@@ -1,10 +1,10 @@
 #!/bin/bash
-#  ___           _        _ _   _   _                     _       _       
-# |_ _|_ __  ___| |_ __ _| | | | | | |_   _ _ __  _ __ __| | ___ | |_ ___ 
+#  ___           _        _ _   _   _                     _       _
+# |_ _|_ __  ___| |_ __ _| | | | | | |_   _ _ __  _ __ __| | ___ | |_ ___
 #  | || '_ \/ __| __/ _` | | | | |_| | | | | '_ \| '__/ _` |/ _ \| __/ __|
 #  | || | | \__ \ || (_| | | | |  _  | |_| | |_) | | | (_| | (_) | |_\__ \
 # |___|_| |_|___/\__\__,_|_|_| |_| |_|\__, | .__/|_|  \__,_|\___/ \__|___/
-#                                     |___/|_|                            
+#                                     |___/|_|
 
 read -r -p "Proceed with Installation? [y/N]: " -n 1
 echo ""
@@ -27,79 +27,82 @@ if [[ "$REPLY" =~ ^[Yy]$ ]]; then
 else
     echo "Installation did not proceed. Nothing has been installed!"
     sleep 2
-    fi
+fi
 
+read -r -p "Stow config files using gnu stow? [y/N]: " -n 1
+echo ""
 
-    read -r -p "Stow config files using gnu stow? [y/N]: " -n 1
-    echo ""
+if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+    sleep 2
+    echo "..."
+    cd "$PWD"
+    sleep 2
+    echo "Stowing config file"
+    stow avizo fastfetch Hyprland kitty satty swaync Thunar wal waybar waypaper wlogout zathura zsh tmux
+else
+    sleep 2
+    echo "Config files have not been stowed!"
+fi
 
-    if [[ "$REPLY" =~ ^[Yy]$ ]]; then
-        sleep 2
-        echo "..."
-        cd "$PWD"
-        sleep 2
-        echo "Stowing config file"
-        stow avizo fastfetch Hyprland kitty satty swaync Thunar wal waybar waypaper wlogout zathura zsh
-    else
-        sleep 2
-        echo "Config files have not been stowed!"
-    fi
+read -r -p "Create initial pywal colorscheme using the provided wallpaper? (Please make sure that all config files have been stowed before running this) [y/N]: " -n 1
+echo ""
 
+if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+    sleep 2
+    echo "..."
+    sleep 2
+    echo "Creating pywal colorscheme"
+    wal -i ./City-Rain.png
+else
+    sleep 2
+    echo "Colorscheme has not been generated!"
+fi
 
-    read -r -p "Create initial pywal colorscheme using the provided wallpaper? (Please make sure that all config files have been stowed before running this) [y/N]: " -n 1
-    echo ""
+read -r -p "Run Post Installation Commands? [y/N]: " -n 1
+echo ""
 
-    if [[ "$REPLY" =~ ^[Yy]$ ]]; then
-        sleep 2
-        echo "..."
-        sleep 2
-        echo "Creating pywal colorscheme"
-        wal -i ./City-Rain.png
-    else
-        sleep 2
-        echo "Colorscheme has not been generated!"
-    fi
+if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+    echo "Enabling sddm..."
+    sleep 1
+    sudo systemctl enable sddm.service
+    echo "Installing pywalfox daemon ..."
+    sleep 1
+    sudo pywalfox install
 
-    read -r -p "Run Post Installation Commands? [y/N]: " -n 1
-    echo ""
+    echo "Installing the Inter font provided with the dotfiles"
+    sleep 1
+    mkdir -p ~/.local/share/fonts/Inter
+    cd "$PWD"
+    cp ./fonts/Inter.zip ~/.local/share/fonts/
+    cd ~/.local/share/fonts/
+    unzip Inter.zip -d Inter/
+    fc-cache -v -f
+    rm Inter.zip
+    cd ~
 
-    if [[ "$REPLY" =~ ^[Yy]$ ]]; then
-        echo "Enabling sddm..."
-        sleep 1
-        sudo systemctl enable sddm.service
-        echo "Installing pywalfox daemon ..."
-        sleep 1
-        sudo pywalfox install
+    echo "Installing CascadiaCode and JetBrainsMono Nerd fonts using getnf"
+    sleep 1
+    getnf -i "CascadiaCode,JetBrainsMono"
 
-        echo "Installing the Inter font provided with the dotfiles"
-        sleep 1
-        mkdir -p ~/.local/share/fonts/Inter
-        cd "$PWD"
-        cp ./fonts/Inter.zip ~/.local/share/fonts/
-        cd ~/.local/share/fonts/
-        unzip Inter.zip -d Inter/
-        fc-cache -v -f
-        rm Inter.zip
-        cd ~
+    echo "Setting up zsh plugins..."
+    sleep
+    mkdir -p ~/.zsh/plugins/fsh
+    mkdir -p ~/.zsh/plugins/zsh-autosuggestions
+    mkdir -p ~/.zsh/plugins/zsh-completions
+    git clone https://github.com/zdharma/fast-syntax-highlighting ~/.zsh/plugins/fsh
+    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/plugins/zsh-autosuggestions
+    git clone https://github.com/zsh-users/zsh-completions ~/.zsh/plugins/zsh-completions
+    curl https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/refs/heads/master/plugins/fzf/fzf.plugin.zsh >~/.zsh/plugins/fzf.plugin.zsh
 
-        echo "Installing CascadiaCode and JetBrainsMono Nerd fonts using getnf"
-        sleep 1
-        getnf -i "CascadiaCode,JetBrainsMono"
-
-        echo "Setting up zsh plugins..."
-        sleep 
-        mkdir -p ~/.zsh/plugins/fsh
-        mkdir -p ~/.zsh/plugins/zsh-autosuggestions
-        mkdir -p ~/.zsh/plugins/zsh-completions
-        git clone https://github.com/zdharma/fast-syntax-highlighting ~/.zsh/plugins/fsh
-        git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/plugins/zsh-autosuggestions
-        git clone https://github.com/zsh-users/zsh-completions ~/.zsh/plugins/zsh-completions
-        curl https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/refs/heads/master/plugins/fzf/fzf.plugin.zsh > ~/.zsh/plugins/fzf.plugin.zsh
-
-    else
-        sleep 2
-        echo "Skipping Post Installation Commands"
-    fi
-
+    echo "Setting up tmux"
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    tmux new-session -d
+    sleep 2
+    tmux send-keys -t 0 "C-b I" C-m
+    tmux kill-server
+else
+    sleep 2
+    echo "Skipping Post Installation Commands"
+fi
 
 echo "ENJOY!"
