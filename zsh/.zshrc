@@ -15,6 +15,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 alias l="eza -lah"
 alias n="nvim"
 alias t="tmux"
+alias ta="tmux attach -t"
 alias nf="nvim ./"
 alias ls="eza"
 alias gpus='lspci -k | grep -A 2 -E "(VGA|3D)"'
