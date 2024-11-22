@@ -1,0 +1,3 @@
+refresher:
+  refreshInterval: 2
+  fetchInterval: 60
