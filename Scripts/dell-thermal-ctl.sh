@@ -14,17 +14,6 @@ echo "Current thermal profile: $current_profile"
 # Prompt the user to select a new profile
 profile_choice="$1"
 
-if [ $# -eq 0 ]; then
-    echo "Select a new thermal profile:"
-    echo "1. Balanced(b)"
-    echo "2. Performance(p)"
-    echo "3. Cool(c)"
-    echo "4. Quiet(q)"
-    echo "Note: You can also run this script and pass the value as an argument, for eg: 'dell-thermal-ctl 2' or 'dell-thermal-ctl p' (for performance mode)"
-    read -p "Enter 1, 2, 3, or 4: " profile_choice
-fi
-
-
 # Set the new thermal profile
 case $profile_choice in
   1)
@@ -52,8 +41,12 @@ case $profile_choice in
     new_profile="quiet"
     ;;
   *)
-    echo "Invalid choice. Exiting."
-    exit 1
+    echo "Usage:'dell-thermal-ctl.sh <Mode>', where <Mode> is:"
+    echo "1. Balanced(b)"
+    echo "2. Performance(p)"
+    echo "3. Cool(c)"
+    echo "4. Quiet(q)"
+    exit 0
     ;;
 esac
 
