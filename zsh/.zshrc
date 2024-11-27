@@ -10,6 +10,7 @@
 # fzf: https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/fzf/fzf.plugin.zsh
 
 autoload -Uz compinit && compinit
+zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 alias l="eza -lah"
