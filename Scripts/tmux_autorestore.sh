@@ -10,4 +10,5 @@ tmux run-shell ~/.tmux/plugins/tmux-resurrect/scripts/restore.sh
 echo "Killing temporary session..."
 sleep 1
 tmux kill-session -t _hidden
+tmux kill-session -t 0
 echo "DONE!!"
