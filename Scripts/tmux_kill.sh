@@ -10,6 +10,7 @@ fi
 
 # Kill the server
 tmux kill-server
+sleep 2
 
 # Restore the good save if new one is empty
 new_save=$(readlink -f "${RESURRECT_DIR}/last")

@@ -16,6 +16,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 alias l="eza -lah"
 alias n="nvim"
 alias t="tmux"
+alias tkill="~/dotfiles/Scripts/tmux_kill.sh"
 alias ta="tmux attach -t"
 alias nf="nvim ./"
 alias ls="eza"

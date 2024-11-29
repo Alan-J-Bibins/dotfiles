@@ -56,6 +56,42 @@ version = 3
       cache_duration = 'none'
 
   [[blocks.segments]]
+    template = "| 󰟓 {{ .Full }} "
+    foreground = '#7FD5EA'
+    type = 'go'
+    style = 'powerline'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+
+  [[blocks.segments]]
+    template = "| 󱘗 {{ .Full }} "
+    foreground = '#F5710A'
+    type = 'rust'
+    style = 'powerline'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+
+  [[blocks.segments]]
+    template = "|  {{ .Full }} "
+    foreground = '#F72B34'
+    type = 'java'
+    style = 'powerline'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+
+  [[blocks.segments]]
+    template = "|  {{ .Full }} "
+    foreground = '#1C6AC2'
+    type = 'lua'
+    style = 'powerline'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+
+  [[blocks.segments]]
     template = '|  {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} '
     foreground = '#6CA35E'
     type = 'node'
