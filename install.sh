@@ -17,12 +17,12 @@ if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     sleep 1
     echo "Please make sure that you pay close attention to what is happening as the applications and packages are installed.."
     sleep 1
-    yay -S --needed hyprland hyprlock cpio xorg-xhost hyprwayland-scanner xdg-desktop-portal xdg-desktop-portal-hyprland wl-clipboard nwg-look qt5-wayland qt6-wayland qt5ct qt6ct kvantum swaync kvantum-theme-materia materia-kde materia-gtk-theme kvantum-qt5 cliphist swww unzip ripgrep fd atuin fzf lazygit python-pip bluez bluez-utils pamixer brightnessctl blueman pavucontrol grim vlc waybar wofi waypaper bibata-cursor-theme oh-my-posh avizo wlogout kitty zsh papirus-icon-theme thunar python-pywalfox tumbler ffmpegthumbnailer hyprpicker jq slurp libsmbios yt-dlp aria2 zathura zathura-pdf-mupdf pacman-contrib mpd playerctl wev thunar-archive-plugin xarchiver ttf-jetbrains-mono-nerd ttf-dejavu ttf-liberation noto-fonts freetype2 less python-pywal sddm eza zoxide blueman network-manager-applet btop satty cmake meson fuse polkit-kde-agent stow getnf tmux
+    yay -S --needed hyprland hyprlock cpio xorg-xhost hyprwayland-scanner xdg-desktop-portal xdg-desktop-portal-hyprland wl-clipboard nwg-look qt5-wayland qt6-wayland qt5ct qt6ct kvantum swaync kvantum-theme-materia materia-kde materia-gtk-theme kvantum-qt5 cliphist swww unzip ripgrep fd atuin fzf lazygit python-pip bluez bluez-utils pamixer brightnessctl blueman pavucontrol grim vlc waybar wofi waypaper bibata-cursor-theme oh-my-posh avizo wlogout kitty zsh papirus-icon-theme thunar python-pywalfox tumbler ffmpegthumbnailer hyprpicker jq slurp libsmbios yt-dlp aria2 zathura zathura-pdf-mupdf pacman-contrib mpd playerctl wev thunar-archive-plugin xarchiver ttf-jetbrains-mono-nerd ttf-dejavu ttf-liberation noto-fonts freetype2 less python-pywal sddm eza zoxide blueman network-manager-applet btop satty cmake meson fuse polkit-kde-agent stow getnf tmux zsh-completions zsh-autosuggestions
 
     echo "Checking if everything was installed properly using the '--needed' flag of yay"
     sleep 1
     echo "..."
-    yay -S --needed hyprland hyprlock cpio xorg-xhost hyprwayland-scanner xdg-desktop-portal xdg-desktop-portal-hyprland wl-clipboard nwg-look qt5-wayland qt6-wayland qt5ct qt6ct kvantum swaync kvantum-theme-materia materia-kde materia-gtk-theme kvantum-qt5 cliphist swww unzip ripgrep fd atuin fzf lazygit python-pip bluez bluez-utils pamixer brightnessctl blueman pavucontrol grim vlc waybar wofi waypaper bibata-cursor-theme oh-my-posh avizo wlogout kitty zsh papirus-icon-theme thunar python-pywalfox tumbler ffmpegthumbnailer hyprpicker jq slurp libsmbios yt-dlp aria2 zathura zathura-pdf-mupdf pacman-contrib mpd playerctl wev thunar-archive-plugin xarchiver ttf-jetbrains-mono-nerd ttf-dejavu ttf-liberation noto-fonts freetype2 less python-pywal sddm eza zoxide blueman network-manager-applet btop satty cmake meson fuse polkit-kde-agent stow getnf tmux
+    yay -S --needed hyprland hyprlock cpio xorg-xhost hyprwayland-scanner xdg-desktop-portal xdg-desktop-portal-hyprland wl-clipboard nwg-look qt5-wayland qt6-wayland qt5ct qt6ct kvantum swaync kvantum-theme-materia materia-kde materia-gtk-theme kvantum-qt5 cliphist swww unzip ripgrep fd atuin fzf lazygit python-pip bluez bluez-utils pamixer brightnessctl blueman pavucontrol grim vlc waybar wofi waypaper bibata-cursor-theme oh-my-posh avizo wlogout kitty zsh papirus-icon-theme thunar python-pywalfox tumbler ffmpegthumbnailer hyprpicker jq slurp libsmbios yt-dlp aria2 zathura zathura-pdf-mupdf pacman-contrib mpd playerctl wev thunar-archive-plugin xarchiver ttf-jetbrains-mono-nerd ttf-dejavu ttf-liberation noto-fonts freetype2 less python-pywal sddm eza zoxide blueman network-manager-applet btop satty cmake meson fuse polkit-kde-agent stow getnf tmux zsh-completions zsh-autosuggestions
     echo "Checking completed!!!"
 else
     echo "Installation did not proceed. Nothing has been installed!"
@@ -90,8 +90,8 @@ if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     mkdir -p ~/.zsh/plugins/zsh-autosuggestions
     mkdir -p ~/.zsh/plugins/zsh-completions
     git clone https://github.com/zdharma/fast-syntax-highlighting ~/.zsh/plugins/fsh
-    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/plugins/zsh-autosuggestions
-    git clone https://github.com/zsh-users/zsh-completions ~/.zsh/plugins/zsh-completions
+    # git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/plugins/zsh-autosuggestions
+    # git clone https://github.com/zsh-users/zsh-completions ~/.zsh/plugins/zsh-completions
     curl https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/refs/heads/master/plugins/fzf/fzf.plugin.zsh >~/.zsh/plugins/fzf.plugin.zsh
 
     echo "Setting up tmux"

@@ -10,8 +10,11 @@
 # fzf: https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/fzf/fzf.plugin.zsh
 
 autoload -Uz compinit && compinit
-zstyle ':completion:*' menu select
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # Case-insensitive matching
+zstyle ':completion:*' menu select # Interactive menu selection
+zstyle ':completion:*' completer _complete _match _approximate
+zstyle ':completion:*:match:*' original only
+zstyle ':completion:*:approximate:*' max-errors 1 numeric
 
 alias l="eza -lah"
 alias n="nvim"
@@ -81,12 +84,20 @@ source ~/.zsh/plugins/fsh/F-Sy-H.plugin.zsh
 # source ~/.zsh/plugins/fsh/fast-syntax-highlighting.plugin.zsh
 
 #zsh-users' autosuggestion
-source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #zsh-users' completion plugin
-fpath=($ZSH/plugins/zsh-completions/src $fpath)
+# fpath=($ZSH/plugins/zsh-completions/src $fpath)
 
-fpath=(~/.zsh/completion $fpath)
+# fpath=(~/.zsh/completion $fpath)
+
+# Additional completion sources
+fpath=(
+  /usr/share/zsh/site-functions
+  /usr/share/zsh/functions/Completion
+  $fpath
+)
+
 autoload -U compinit
 compinit
 

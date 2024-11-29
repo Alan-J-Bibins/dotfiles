@@ -56,7 +56,7 @@ version = 3
       cache_duration = 'none'
 
   [[blocks.segments]]
-    template = "| 󰟓 {{ .Full }} "
+    template = "|  {{ .Full }} "
     foreground = '#7FD5EA'
     type = 'go'
     style = 'powerline'
