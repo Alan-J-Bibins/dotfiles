@@ -135,7 +135,8 @@
         "rewrite": {
             "~(.*)": "  ~$1",
             "(.*) — Mozilla Firefox": "  $1",
-            "nvim": "nvim"
+            "ta (.*)": " $1",
+            "tmux (.*)": " $1"
         },
         "separate-outputs": true
     },
