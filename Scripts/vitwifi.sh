@@ -54,7 +54,7 @@ echo "Checking for VIT WiFi..."
 # SSID=$(iw dev $device link | grep -iE 'ssid')
 # SSID=$(nmcli | grep -iE 'VIT[2.4 5][G]$')
 # SSID=$(nmcli | grep -iE 'VIT(2.4|5)(G|)$')
-SSID=$(iw dev $device link | grep -iE 'VIT(2.4|5)(G|)$')
+SSID=$(iw dev $device link | grep -iE 'VIT')
 echo $SSID
 
 if [[ $SSID ]]; then
