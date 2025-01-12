@@ -19,7 +19,7 @@ zstyle ':completion:*:approximate:*' max-errors 1 numeric
 alias l="eza -lah"
 alias n="nvim"
 alias t="tmux"
-alias tkill="~/dotfiles/Scripts/tmux_kill.sh"
+alias tkill="tmux kill-server"
 alias ta="tmux attach -t"
 alias tx="tmuxinator"
 alias nf="nvim ./"
