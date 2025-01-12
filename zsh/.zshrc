@@ -21,6 +21,7 @@ alias n="nvim"
 alias t="tmux"
 alias tkill="~/dotfiles/Scripts/tmux_kill.sh"
 alias ta="tmux attach -t"
+alias tx="tmuxinator"
 alias nf="nvim ./"
 alias ls="eza"
 alias gpus='lspci -k | grep -A 2 -E "(VGA|3D)"'
@@ -62,6 +63,23 @@ function dls(){
     DIR="$*"
     du -shc * | sort -h
 }
+
+function sesh-sessions() {
+  {
+    exec </dev/tty
+    exec <&1
+    local session
+    session=$(sesh list -T | fzf --height 40% --reverse --border-label ' sesh ' --border --prompt '⚡  ')
+    zle reset-prompt > /dev/null 2>&1 || true
+    [[ -z "$session" ]] && return
+    sesh connect $session
+  }
+}
+
+zle     -N             sesh-sessions
+bindkey -M emacs '\es' sesh-sessions
+bindkey -M vicmd '\es' sesh-sessions
+bindkey -M viins '\es' sesh-sessions
 
 ### ---- history config -------------------------------------
 export HISTFILE=$ZSH/.zsh_history
