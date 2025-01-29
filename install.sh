@@ -39,6 +39,7 @@ if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     sleep 2
     echo "Stowing config file"
     stow avizo fastfetch Hyprland kitty satty swaync Thunar wal waybar waypaper wlogout wofi zathura zsh tmux lazygit
+    cp config.ini ~/.config/waypaper
 else
     sleep 2
     echo "Config files have not been stowed!"
@@ -100,6 +101,10 @@ if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     sleep 2
     tmux send-keys -t 0 "C-b I" C-m
     tmux kill-server
+
+    echo "Setting up Qt theming"
+    kvantummanager --set MateriaDark
+    # TODO: Figure out how to set qt5 and qt6 to use kvantum-dark
 else
     sleep 2
     echo "Skipping Post Installation Commands"
