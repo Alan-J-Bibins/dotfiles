@@ -14,3 +14,6 @@ bash ~/.config/spicetify/Themes/Pywal/update-colors.sh
 spicetify apply
 cp ~/.cache/wal/colors-vesktop.css ~/.config/vesktop/themes/pywal-vesktop.theme.css
 python3 ~/dotfiles/VesktopTheme/accentValVesktop.py
+killall swayosd-server
+sleep 0.5
+swayosd-server
