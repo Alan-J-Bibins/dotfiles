@@ -38,7 +38,7 @@ if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     cd "$PWD"
     sleep 2
     echo "Stowing config file"
-    stow avizo fastfetch Hyprland kitty satty swaync Thunar wal waybar waypaper wlogout zathura zsh tmux lazygit
+    stow avizo fastfetch Hyprland kitty satty swaync Thunar wal waybar waypaper wlogout wofi zathura zsh tmux lazygit
 else
     sleep 2
     echo "Config files have not been stowed!"
