@@ -40,6 +40,13 @@ if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     echo "Stowing config file"
     stow swayosd fastfetch Hyprland kitty satty swaync Thunar wal waybar waypaper wlogout wofi zathura zsh tmux lazygit
     cp config.ini ~/.config/waypaper
+
+    mkdir -p ~/Public
+    mkdir -p ~/Pictures/Wallpapers
+    mkdir -p ~/Pictures/Screenshots
+    mkdir -p ~/Downloads
+    mkdir -p ~/AppImages
+    mkdir -p ~/Videos
 else
     sleep 2
     echo "Config files have not been stowed!"

@@ -42,3 +42,4 @@ Removed the previously used stupidly-long post_command and moved all of it to a 
 1. Run `./install.sh` and follow the instructions (basically say yes to everything)
 1. Reboot
 1. Copy wallpapers from `https://drive.google.com/drive/folders/13c9e27zigqFp0Hj9F0mF-VDx1KBscWS1?usp=sharing` into `~/Pictures/Wallpapers`
+1. Use nwg-look and kvantum to set the look of gtk and qt applications to Materia Dark
