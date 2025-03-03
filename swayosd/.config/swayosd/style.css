@@ -1,4 +1,4 @@
-@import url("/home/alan/.cache/wal/colors-waybar.css");
+@import url("colors.css");
 
 @define-color theme_bg_color @background;
 @define-color theme_fg_color @color3;

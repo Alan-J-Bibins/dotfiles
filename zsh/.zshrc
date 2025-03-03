@@ -49,6 +49,10 @@ export ZSH=$HOME/.zsh
 export EDITOR="/usr/bin/nvim"
 export TERMINAL="/usr/bin/kitty"
 
+function countdown() {
+    termdown $1 && play -q -n synth 5 sin 100-1000
+}
+
 #yazi
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"

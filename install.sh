@@ -38,7 +38,7 @@ if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     cd "$PWD"
     sleep 2
     echo "Stowing config file"
-    stow swayosd fastfetch Hyprland kitty satty swaync Thunar wal waybar waypaper wlogout wofi zathura zsh tmux lazygit
+    stow swayosd fastfetch Hyprland kitty satty swaync Thunar wallust waybar waypaper wlogout wofi zathura zsh tmux lazygit
     cp config.ini ~/.config/waypaper
 
     mkdir -p ~/Public

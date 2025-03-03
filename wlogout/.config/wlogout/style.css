@@ -1,4 +1,4 @@
-@import '../../.cache/wal/colors-waybar.css';
+@import 'colors.css';
 * {
 	background-image: none;
     transition: 150ms;

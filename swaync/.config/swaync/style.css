@@ -1,4 +1,4 @@
-@import url("/home/alan/.cache/wal/colors-waybar.css");
+@import url("colors.css");
 
 @define-color cc-bg @background;
 @define-color noti-border-color @color11;
