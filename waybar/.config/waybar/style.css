@@ -33,10 +33,10 @@ window#waybar {
     transition-property:padding;
     transition-property:border;
     transition-duration: .25s;
-    color: @color1;
-    border-bottom: 4px solid @color1;
-    border-right: 1px solid @color1;
-    border-left: 1px solid @color1;
+    color: @color4;
+    border-bottom: 4px solid @color4;
+    border-right: 1px solid @color4;
+    border-left: 1px solid @color4;
 }
 
 

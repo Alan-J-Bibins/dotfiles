@@ -11,7 +11,7 @@
 
 # How the image is parse, in order to get the colors:
 # full - resized - wal - thumb -  fastresize - kmeans
-backend = "full"
+backend = "wal"
 
 # What color space to use to produce and select the most prominent colors:
 # lab - labmixed - lch - lchmixed
@@ -37,6 +37,7 @@ check_contrast = true
 
 # Alpha value for templating, by default 100 (no other use whatsoever)
 #alpha = 100
+# threshold = 15
 
 [templates]
 btop.template = 'colors-btop.theme'
@@ -68,3 +69,6 @@ wofi.target = '~/.config/wofi/colors.css'
 
 spicetify.template = 'colors-spicetify.ini'
 spicetify.target = '~/.config/spicetify/Themes/Pywal/color.ini'
+
+pywalfox.template = 'colors-pywalfox.json'
+pywalfox.target = '~/.cache/wal/colors.json'
