@@ -18,6 +18,7 @@ zstyle ':completion:*:approximate:*' max-errors 1 numeric
 
 alias l="eza -lah"
 alias n="nvim"
+alias n2="NVIM_APPNAME='nvim2' nvim"
 alias t="tmux"
 alias tkill="tmux kill-server"
 alias ta="tmux attach -t"
@@ -168,3 +169,7 @@ export PATH=$PATH:$HOME/dotfiles/Scripts/
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

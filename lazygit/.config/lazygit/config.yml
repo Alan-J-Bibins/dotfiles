@@ -1,3 +1,7 @@
 refresher:
   refreshInterval: 2
   fetchInterval: 60
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
