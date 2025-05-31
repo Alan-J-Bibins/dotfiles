@@ -2,9 +2,9 @@
 /* Dark mode */
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: JetBrains Mono Nerd Font;
+    font-family: Jetbrains Mono Nerd Font;
     font-size: 15px;
-    font-weight:bolder;
+    font-weight: bolder;
 }
 window#waybar {
     background-color: transparent;
@@ -43,7 +43,7 @@ window#waybar {
 .modules-left {
     margin-left: 5px;
     padding: 0px 10px 0px;
-    background-color: alpha(@background,0.75);
+    background-color: alpha(@background,0.80);
     border-radius: 10px;
     border: @color3 solid 1px;
 }
@@ -51,14 +51,14 @@ window#waybar {
 .modules-center {
     border: @color3 solid 1px;
     padding: 0px 10px 0px;
-    background-color: alpha(@background,0.75);
+    background-color: alpha(@background,0.80);
     border-radius: 10px;
 }
 
 .modules-right {
     border: @color3 solid 1px;
     padding: 0px 10px 0px;
-    background-color: alpha(@background,0.75);
+    background-color: alpha(@background,0.80);
     margin-right: 5px;
     border-radius: 10px;
 }
