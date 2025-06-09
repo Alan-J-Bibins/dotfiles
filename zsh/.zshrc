@@ -156,7 +156,7 @@ source <(fzf --zsh)
 eval "$(atuin init zsh)"
 
 # ----------------------------------------
-# Node, NVM, Pyenv, SDKMAN, etc.
+# Node, FNM, Pyenv, SDKMAN, etc.
 # ----------------------------------------
 
 eval "$(fnm env --use-on-cd --shell zsh)"
