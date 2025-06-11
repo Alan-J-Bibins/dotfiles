@@ -72,3 +72,6 @@ spicetify.target = '~/.config/spicetify/Themes/Pywal/color.ini'
 
 pywalfox.template = 'colors-pywalfox.json'
 pywalfox.target = '~/.cache/wal/colors.json'
+
+rofi.template = 'colors-rofi.rasi'
+rofi.target = '~/.config/rofi/colors.rasi'
