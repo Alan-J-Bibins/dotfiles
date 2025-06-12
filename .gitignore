@@ -9,4 +9,11 @@ renamerrc
 custom_homepage/css/colors.css
 custom_homepage/v1/css/colors.css
 custom_homepage/v2/css/colors.css
-colors**
+Hyprland/.config/hypr/colors-hyprland.conf
+kitty/.config/kitty/colors.conf
+rofi/.config/rofi/colors.rasi
+swaync/.config/swaync/colors.css
+swayosd/.config/swayosd/colors.css
+waybar/.config/waybar/colors.css
+wlogout/.config/wlogout/colors.css
+wofi/.config/wofi/colors.css
