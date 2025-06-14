@@ -17,12 +17,12 @@ if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     sleep 1
     echo "Please make sure that you pay close attention to what is happening as the applications and packages are installed.."
     sleep 1
-    yay -S --needed hyprland hyprlock cpio xorg-xhost hyprwayland-scanner xdg-desktop-portal xdg-desktop-portal-hyprland wl-clipboard nwg-look qt5-wayland qt6-wayland qt5ct qt6ct kvantum swaync kvantum-theme-materia materia-kde materia-gtk-theme kvantum-qt5 cliphist swww unzip ripgrep fd atuin fzf lazygit python-pip bluez bluez-utils pamixer brightnessctl blueman pavucontrol grim vlc waybar wofi waypaper bibata-cursor-theme oh-my-posh wlogout kitty zsh papirus-icon-theme thunar python-pywalfox tumbler ffmpegthumbnailer hyprpicker jq slurp libsmbios yt-dlp aria2 zathura zathura-pdf-mupdf pacman-contrib mpd playerctl wev thunar-archive-plugin xarchiver ttf-jetbrains-mono-nerd ttf-dejavu ttf-liberation noto-fonts freetype2 less python-pywal sddm eza zoxide blueman network-manager-applet btop satty cmake meson fuse polkit-kde-agent stow getnf tmux zsh-completions zsh-autosuggestions swayosd-git
+    yay -S --needed hyprland hyprlock cpio xorg-xhost hyprwayland-scanner xdg-desktop-portal xdg-desktop-portal-hyprland wl-clipboard nwg-look qt5-wayland qt6-wayland qt5ct qt6ct kvantum swaync kvantum-theme-materia materia-kde materia-gtk-theme kvantum-qt5 cliphist swww unzip ripgrep fd atuin fzf lazygit python-pip bluez bluez-utils pamixer brightnessctl blueman pavucontrol grim vlc waybar rofi-wayland waypaper bibata-cursor-theme oh-my-posh wlogout kitty zsh papirus-icon-theme thunar python-pywalfox tumbler ffmpegthumbnailer hyprpicker jq slurp libsmbios yt-dlp aria2 zathura zathura-pdf-mupdf pacman-contrib mpd playerctl wev thunar-archive-plugin xarchiver ttf-jetbrains-mono-nerd ttf-dejavu ttf-liberation noto-fonts freetype2 less python-pywal sddm eza zoxide blueman network-manager-applet btop satty cmake meson fuse polkit-kde-agent stow getnf tmux zsh-completions zsh-autosuggestions swayosd-git
 
     echo "Checking if everything was installed properly using the '--needed' flag of yay"
     sleep 1
     echo "..."
-    yay -S --needed hyprland hyprlock cpio xorg-xhost hyprwayland-scanner xdg-desktop-portal xdg-desktop-portal-hyprland wl-clipboard nwg-look qt5-wayland qt6-wayland qt5ct qt6ct kvantum swaync kvantum-theme-materia materia-kde materia-gtk-theme kvantum-qt5 cliphist swww unzip ripgrep fd atuin fzf lazygit python-pip bluez bluez-utils pamixer brightnessctl blueman pavucontrol grim vlc waybar wofi waypaper bibata-cursor-theme oh-my-posh wlogout kitty zsh papirus-icon-theme thunar python-pywalfox tumbler ffmpegthumbnailer hyprpicker jq slurp libsmbios yt-dlp aria2 zathura zathura-pdf-mupdf pacman-contrib mpd playerctl wev thunar-archive-plugin xarchiver ttf-jetbrains-mono-nerd ttf-dejavu ttf-liberation noto-fonts freetype2 less python-pywal sddm eza zoxide blueman network-manager-applet btop satty cmake meson fuse polkit-kde-agent stow getnf tmux zsh-completions zsh-autosuggestions swayosd-git
+    yay -S --needed hyprland hyprlock cpio xorg-xhost hyprwayland-scanner xdg-desktop-portal xdg-desktop-portal-hyprland wl-clipboard nwg-look qt5-wayland qt6-wayland qt5ct qt6ct kvantum swaync kvantum-theme-materia materia-kde materia-gtk-theme kvantum-qt5 cliphist swww unzip ripgrep fd atuin fzf lazygit python-pip bluez bluez-utils pamixer brightnessctl blueman pavucontrol grim vlc waybar rofi-wayland waypaper bibata-cursor-theme oh-my-posh wlogout kitty zsh papirus-icon-theme thunar python-pywalfox tumbler ffmpegthumbnailer hyprpicker jq slurp libsmbios yt-dlp aria2 zathura zathura-pdf-mupdf pacman-contrib mpd playerctl wev thunar-archive-plugin xarchiver ttf-jetbrains-mono-nerd ttf-dejavu ttf-liberation noto-fonts freetype2 less python-pywal sddm eza zoxide blueman network-manager-applet btop satty cmake meson fuse polkit-kde-agent stow getnf tmux zsh-completions zsh-autosuggestions swayosd-git
     echo "Checking completed!!!"
 else
     echo "Installation did not proceed. Nothing has been installed!"
@@ -116,37 +116,6 @@ if [[ "$REPLY" =~ ^[Yy]$ ]]; then
 else
     sleep 2
     echo "Skipping Post Installation Commands"
-fi
-
-read -r -p "Replace {USER} in CSS files with your username? [y/N]: " -n 1
-echo ""
-
-if [[ "$REPLY" =~ ^[Yy]$ ]]; then
-    sleep 1
-    echo "Replacing {USER} in CSS files..."
-    USERNAME=$(whoami)
-
-    # List of CSS files to process (update these paths as needed)
-    CSS_FILES=(
-        "$HOME/.config/swayosd/style.css"
-        "$HOME/.config/waybar/style.css"
-        "$HOME/.config/swaync/style.css"
-        "$HOME/.config/wofi/style.css"
-    )
-
-    for css_file in "${CSS_FILES[@]}"; do
-        if [[ -f "$css_file" ]]; then
-            sed -i "s|alan|$USERNAME|g" "$css_file"
-            echo "Updated: $css_file"
-        else
-            echo "File not found, skipping: $css_file"
-        fi
-    done
-
-    echo "CSS files updated successfully!"
-else
-    sleep 1
-    echo "Skipping CSS username replacement."
 fi
 
 echo "ENJOY!"
