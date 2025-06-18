@@ -1,7 +1,10 @@
 configuration {
     show-icons:                     true;
     display-drun: 		            "";
+    terminal:                       "kitty";
+    run-shell-command: "{terminal} -e {cmd}";
     drun-display-format:            "{icon} {name}";
+    window-format: "{w} {t}";
     disable-history:                false;
     click-to-exit: 		            true;
     location:                       0;
