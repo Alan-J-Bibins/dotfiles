@@ -29,13 +29,13 @@ for input_file in *; do
 
     # Check if the file extension is in our list or if it's detected as a video file
     if [[ " ${video_extensions[@]} " =~ " ${input_file##*.} " ]] || is_video_file "$input_file"; then
-        output_file="transcoded/${input_file%.*}.mov"
+        output_file="transcoded/${input_file%.*}.mkv"
 
         echo "Transcoding: $input_file"
         echo "--------------------------------------------------------------------------------"
 
         # Perform the transcoding
-        if ffmpeg -i "$input_file" -vcodec mjpeg -q:v 2 -acodec pcm_s16be -q:a 0 -f mov "$output_file"; then
+        if ffmpeg -i "$input_file" -c:v av1_nvenc -c:a pcm_s16le "$output_file" ; then
             echo "--------------------------------------------------------------------------------"
             echo "Successfully transcoded: $input_file -> $output_file"
             ((processed++))
