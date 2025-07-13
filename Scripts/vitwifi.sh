@@ -59,31 +59,30 @@ echo $SSID
 
 if [[ $SSID ]]; then
 	login_request $ID $PASS
-
-else
-	echo "VIT Network not found, changing connection... "
-
-	echo " Trying to login to VIT 5G WiFi"
-
-	Y=$(nmcli device wifi connect "VIT5G")
-
-	if [[ "$Y" =~ 'successfully' ]]; then
-		login_request $ID $PASS
-
-	else
-		echo "Failed to connect to VIT 5G WiFi, trying 2.4G"
-
-		Y=$(nmcli device wifi connect "VIT2.4G")
-
-		if [[ "$Y" =~ "successfully" ]]; then
-			echo "Logged in to VIT WiFi"
-
-			login_request $ID $PASS
-
-		else
-			echo "Connection attempts failed. Try manually"
-		fi
-	fi
+# else
+# 	echo "VIT Network not found, changing connection... "
+#
+# 	echo " Trying to login to VIT 5G WiFi"
+#
+# 	Y=$(nmcli device wifi connect "VIT5G")
+#
+# 	if [[ "$Y" =~ 'successfully' ]]; then
+# 		login_request $ID $PASS
+#
+# 	else
+# 		echo "Failed to connect to VIT 5G WiFi, trying 2.4G"
+#
+# 		Y=$(nmcli device wifi connect "VIT2.4G")
+#
+# 		if [[ "$Y" =~ "successfully" ]]; then
+# 			echo "Logged in to VIT WiFi"
+#
+# 			login_request $ID $PASS
+#
+# 		else
+# 			echo "Connection attempts failed. Try manually"
+# 		fi
+# 	fi
 fi
 
 ipv6=$(nmcli | grep -iE 'pvpn-ipv6leak-protection')
