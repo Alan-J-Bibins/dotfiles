@@ -128,7 +128,7 @@ zstyle ':completion:*:approximate:*' max-errors 1 numeric
 # ----------------------------------------
 
 # Fast syntax highlighting (keep at end)
-source "$ZSH/plugins/fsh/F-Sy-H.plugin.zsh"
+source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # Autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
