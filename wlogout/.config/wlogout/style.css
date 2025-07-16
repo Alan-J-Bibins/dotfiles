@@ -1,5 +1,6 @@
 @import 'colors.css';
 * {
+    font-family: "Product Sans";
 	background-image: none;
     transition: 150ms;
 	box-shadow: none;

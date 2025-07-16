@@ -2,8 +2,8 @@
 /* Dark mode */
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Jetbrains Mono Nerd Font;
-    font-size: 15px;
+    font-family: "Product Sans", "Jetbrains Mono Nerd Font Propo";
+    font-size: 16px;
     font-weight: bolder;
 }
 window#waybar {
