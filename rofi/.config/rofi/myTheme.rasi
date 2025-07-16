@@ -1,6 +1,6 @@
 @theme "./colors.rasi"
 * {
-    font: "JetBrains Mono Nerd Font Bold 12";
+    font: "Product Sans 13";
 }
 
 /*****----- Global Properties -----*****/
@@ -41,6 +41,7 @@ prompt {
 textbox-prompt-colon {
     expand: 			            false;
     str: 			                "";
+    font: "JetBrains Mono Nerd Font Bold 12";
     border-radius:                  100%;
     background-color:               transparent;
     text-color:                     @PLA;
