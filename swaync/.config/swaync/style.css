@@ -15,7 +15,7 @@
 @define-color bg-selected @color1;
 
 * {
-    font-family: Inter;
+    font-family: "Product Sans";
 }
 .notification-row {
   outline: none;

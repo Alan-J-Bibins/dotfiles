@@ -52,15 +52,15 @@ else
     echo "Config files have not been stowed!"
 fi
 
-read -r -p "Create initial pywal colorscheme using the provided wallpaper? (Please make sure that all config files have been stowed before running this) [y/N]: " -n 1
+read -r -p "Create initial wallust colorscheme using the provided wallpaper? (Please make sure that all config files have been stowed before running this) [y/N]: " -n 1
 echo ""
 
 if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     sleep 2
     echo "..."
     sleep 2
-    echo "Creating pywal colorscheme"
-    wal -i ./City-Rain.png
+    echo "Creating wallust colorscheme"
+    wallust run ./City-Rain.png
 else
     sleep 2
     echo "Colorscheme has not been generated!"
@@ -77,16 +77,11 @@ if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     sleep 1
     sudo pywalfox install
 
-    echo "Installing the Inter font provided with the dotfiles"
+    echo "Installing the fonts provided with the dotfiles"
     sleep 1
-    mkdir -p ~/.local/share/fonts/Inter
-    cd "$PWD"
-    cp ./fonts/Inter.zip ~/.local/share/fonts/
-    cd ~/.local/share/fonts/
-    unzip Inter.zip -d Inter/
+    cp -r ~/dotfiles/fonts/ProductSans/ ~/.local/share/fonts/
+    cp -r ~/dotfiles/fonts/Inter/ ~/.local/share/fonts/
     fc-cache -v -f
-    rm Inter.zip
-    cd ~
 
     echo "Installing CascadiaCode and JetBrainsMono Nerd fonts using getnf"
     sleep 1
