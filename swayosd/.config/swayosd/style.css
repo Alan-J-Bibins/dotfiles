@@ -1,7 +1,8 @@
 @import url("colors.css");
 
 @define-color theme_bg_color @background;
-@define-color theme_fg_color @color3;
+@define-color theme_fg_color @color11;
+@define-color theme_accent_color @color12;
 
 window#osd {
     padding: 12px 12px;
@@ -15,7 +16,7 @@ window#osd #container {
 }
 window#osd image,
 window#osd label {
-    color: @theme_fg_color;
+    color: @theme_accent_color;
 }
 
 window#osd progressbar:disabled,
@@ -41,5 +42,5 @@ window#osd progress {
     min-height: inherit;
     border-radius: inherit;
     border: none;
-    background: @theme_fg_color;
+    background: @theme_accent_color;
 }

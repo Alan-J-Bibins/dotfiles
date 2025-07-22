@@ -6,8 +6,8 @@
 /*****----- Global Properties -----*****/
 * {    
     BG:    @backgroundA;
-    BGA:   @color4;
-    FG:    @color11;
+    BGA:   @color12;
+    FG:    @color14;
     FGA:   #F28FADff;
     BDR:   @color11;
     SEL:   @background;

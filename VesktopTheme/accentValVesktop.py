@@ -16,7 +16,7 @@ with open(jsonFile, 'r') as file:
     wal_colors = json.load(file)
 
 # Get the accent color (assuming it's the first color in the palette)
-accent_hex = wal_colors['colors']['color3']
+accent_hex = wal_colors['colors']['color12']
 accent_hsl = hex_to_hsl(accent_hex)
 
 # Read the CSS file
