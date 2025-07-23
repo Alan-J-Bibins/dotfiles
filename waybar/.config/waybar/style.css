@@ -9,19 +9,19 @@
 window#waybar {
     background-color: transparent;
     border-bottom: transparent;
-    color: @color3;
+    color: @color11;
 }
 
 #workspaces {
     margin: 2px;
     background-color: transparent;
-    color: @color3;
+    color: @color11;
 }
 
 
 #workspaces button {
     background-color: transparent;
-    color: @color3;
+    color: @color11;
     margin-left:2px;
     margin-right:2px;
 }
@@ -45,18 +45,18 @@ window#waybar {
     padding: 0px 10px 0px;
     background-color: alpha(@background,0.80);
     border-radius: 10px;
-    border: @color3 solid 1px;
+    border: @color11 solid 1px;
 }
 
 .modules-center {
-    border: @color3 solid 1px;
+    border: @color11 solid 1px;
     padding: 0px 10px 0px;
     background-color: alpha(@background,0.80);
     border-radius: 10px;
 }
 
 .modules-right {
-    border: @color3 solid 1px;
+    border: @color11 solid 1px;
     padding: 0px 10px 0px;
     background-color: alpha(@background,0.80);
     margin-right: 5px;
