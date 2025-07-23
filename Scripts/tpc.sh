@@ -11,7 +11,7 @@ makefile_content() {
 all: output/${project_name}.out
 	./output/${project_name}.out
 
-output/${project_name}.out: ${project_name}.c
+output/${project_name}.out: ${project_name}.${project_language}
 	mkdir -p output/
 	${compiler} ${project_name}.${project_language} -o output/${project_name}.out
 
