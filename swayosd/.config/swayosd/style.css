@@ -1,7 +1,7 @@
 @import url("colors.css");
 
 @define-color theme_bg_color @background;
-@define-color theme_fg_color @color11;
+@define-color theme_fg_color @color13;
 @define-color theme_accent_color @color12;
 
 window#osd {

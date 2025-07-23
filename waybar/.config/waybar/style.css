@@ -9,7 +9,7 @@
 window#waybar {
     background-color: transparent;
     border-bottom: transparent;
-    color: @color11;
+    color: @color13;
 }
 
 #workspaces {
@@ -21,7 +21,7 @@ window#waybar {
 
 #workspaces button {
     background-color: transparent;
-    color: @color11;
+    color: @color13;
     margin-left:2px;
     margin-right:2px;
 }

@@ -7,7 +7,7 @@
 * {    
     BG:    @backgroundA;
     BGA:   @color12;
-    FG:    @color14;
+    FG:    @color13;
     FGA:   #F28FADff;
     BDR:   @color11;
     SEL:   @background;
