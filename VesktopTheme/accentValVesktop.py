@@ -36,7 +36,11 @@ print(css_content)
 
 # Write the updated CSS
 newCss = os.path.expanduser('~') + "/.config/vesktop/themes/TranslucenceModified.theme.css"
+newCss2 = os.path.expanduser('~') + "/.var/app/dev.vencord.Vesktop/config/vesktop/themes/TranslucenceModified.theme.css"
 with open(newCss, 'w') as file:
+    file.write(css_content)
+
+with open(newCss2, 'w') as file:
     file.write(css_content)
 
 print("Theme updated with pywal colors!")
