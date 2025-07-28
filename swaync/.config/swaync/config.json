@@ -7,7 +7,7 @@
   "control-center-positionX": "right",
   "control-center-positionY": "top",
   "layer-shell": true,
-  "cssPriority": "application",
+  "cssPriority": "user",
   "control-center-margin-top": 5,
   "control-center-margin-bottom": 5,
   "control-center-margin-right": 5,
