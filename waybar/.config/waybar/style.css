@@ -54,7 +54,7 @@ window#waybar {
     padding: 0px 10px 0px;
     background-color: alpha(@background,0.80);
     border-radius: 10px;
-    transition-property: opacity;
+    transition-property: opacity, padding;
     transition-duration: .15s;
     opacity:1;
 }
@@ -69,4 +69,5 @@ window#waybar {
 
 window#waybar.empty .modules-center {
     opacity: 0;
+    padding: 0px 20px 0px;
 }

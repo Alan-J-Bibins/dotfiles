@@ -31,6 +31,7 @@ setopt HIST_FIND_NO_DUPS
 # Aliases
 # ----------------------------------------
 alias l="eza -lah"
+alias li="eza -lah --icons"
 alias n="nvim"
 alias n2="NVIM_APPNAME='nvim2' nvim"
 alias t="tmux"
