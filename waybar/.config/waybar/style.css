@@ -12,6 +12,7 @@ window#waybar {
     color: @color13;
 }
 
+
 #workspaces {
     margin: 2px;
     background-color: transparent;
@@ -53,6 +54,9 @@ window#waybar {
     padding: 0px 10px 0px;
     background-color: alpha(@background,0.80);
     border-radius: 10px;
+    transition-property: opacity;
+    transition-duration: .15s;
+    opacity:1;
 }
 
 .modules-right {
@@ -61,4 +65,8 @@ window#waybar {
     background-color: alpha(@background,0.80);
     margin-right: 5px;
     border-radius: 10px;
+}
+
+window#waybar.empty .modules-center {
+    opacity: 0;
 }
