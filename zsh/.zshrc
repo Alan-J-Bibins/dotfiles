@@ -133,6 +133,7 @@ source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.
 
 # Autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey '^ ' autosuggest-accept
 
 # FZF plugin (from Oh-My-Zsh)
 [ -f "$ZSH/plugins/fzf.plugin.zsh" ] && source "$ZSH/plugins/fzf.plugin.zsh"
