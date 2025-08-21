@@ -75,7 +75,7 @@ function y() {
 }
 
 function dls() {
-    du -shc * | sort -h
+    du -shc "$@" | sort -h
 }
 
 function sesh-sessions() {
