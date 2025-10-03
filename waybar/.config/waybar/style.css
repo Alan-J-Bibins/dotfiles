@@ -1,4 +1,5 @@
 @import url("colors.css");
+
 /* Dark mode */
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -6,6 +7,7 @@
     font-size: 16px;
     font-weight: bolder;
 }
+
 window#waybar {
     background-color: transparent;
     border-bottom: transparent;
@@ -23,16 +25,17 @@ window#waybar {
 #workspaces button {
     background-color: transparent;
     color: @color13;
-    margin-left:2px;
-    margin-right:2px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 #workspaces button.active {
     background-color: alpha(@color12, 0.05);
+    box-shadow: 0px 2px 5px alpha(@color12, 0.6);
     border-radius: 10px;
-    padding:0px 15px 0px;
-    transition-property:padding;
-    transition-property:border;
+    padding: 0px 15px 0px;
+    transition-property: padding;
+    transition-property: border;
     transition-duration: .25s;
     color: @color12;
     border-bottom: 4px solid @color12;
@@ -40,11 +43,10 @@ window#waybar {
     border-left: 1px solid @color12;
 }
 
-
 .modules-left {
     margin-left: 5px;
     padding: 0px 10px 0px;
-    background-color: alpha(@background,0.80);
+    background-color: alpha(@background, 0.80);
     border-radius: 10px;
     border: @color11 solid 1px;
 }
@@ -52,17 +54,17 @@ window#waybar {
 .modules-center {
     border: @color11 solid 1px;
     padding: 0px 10px 0px;
-    background-color: alpha(@background,0.80);
+    background-color: alpha(@background, 0.80);
     border-radius: 10px;
     transition-property: opacity, padding;
     transition-duration: .15s;
-    opacity:1;
+    opacity: 1;
 }
 
 .modules-right {
     border: @color11 solid 1px;
     padding: 0px 10px 0px;
-    background-color: alpha(@background,0.80);
+    background-color: alpha(@background, 0.80);
     margin-right: 5px;
     border-radius: 10px;
 }
