@@ -27,16 +27,16 @@ window#waybar {
     color: @color13;
     margin-left: 2px;
     margin-right: 2px;
+    box-shadow: 0px 2px 4px alpha(@color12, 0.0);
 }
 
 #workspaces button.active {
     background-color: alpha(@color12, 0.05);
-    box-shadow: 0px 2px 5px alpha(@color12, 0.6);
+    box-shadow: 0px 2px 4px alpha(@color12, 0.6);
     border-radius: 10px;
     padding: 0px 15px 0px;
-    transition-property: padding;
-    transition-property: border;
-    transition-duration: .25s;
+    transition-property: border, padding, color, shadow;
+    transition-duration: .20s;
     color: @color12;
     border-bottom: 4px solid @color12;
     border-right: 1px solid @color12;

@@ -141,7 +141,7 @@
         "separate-outputs": true
     },
     "custom/archlogo": {
-        "format": " ",
+        "format": "  ",
         "on-click":"hyprctl dispatch exec '[float; move 5 45; minsize 864 464; maxsize 864 464] kitty --hold fastfetch'"
     },
     "custom/power":{
