@@ -28,7 +28,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-    background-color: transparent;
+    background-color: alpha(@color12, 0.05);
     border-radius: 10px;
     padding:0px 15px 0px;
     transition-property:padding;
