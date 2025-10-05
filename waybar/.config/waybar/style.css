@@ -31,7 +31,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-    background-color: alpha(@color12, 0.05);
+    background-color: alpha(@color12, 0.1);
     box-shadow: 0px 2px 4px alpha(@color12, 0.6);
     border-radius: 10px;
     padding: 0px 15px 0px;
