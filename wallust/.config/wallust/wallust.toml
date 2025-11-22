@@ -75,3 +75,6 @@ pywalfox.target = '~/.cache/wal/colors.json'
 
 rofi.template = 'colors-rofi.rasi'
 rofi.target = '~/.config/rofi/colors.rasi'
+
+obsidian.template = 'colors-obsidian.json'
+obsidian.target = '~/AJB/sentorus/.obsidian/app.json'

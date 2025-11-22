@@ -171,3 +171,6 @@ fi
 
 # SDKMAN
 [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
+
+# Turso
+export PATH="$PATH:/home/alan/.turso"
