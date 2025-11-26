@@ -77,4 +77,4 @@ rofi.template = 'colors-rofi.rasi'
 rofi.target = '~/.config/rofi/colors.rasi'
 
 obsidian.template = 'colors-obsidian.json'
-obsidian.target = '~/AJB/sentorus/.obsidian/app.json'
+obsidian.target = '~/AJB/Sentorus/.obsidian/app.json'

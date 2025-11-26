@@ -1,3 +1,4 @@
 {
-  "accentColor": "{{color12 | strip}}"
+  "accentColor": "{{color12 | strip}}",
+  "vimMode": true
 }
