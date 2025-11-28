@@ -9,7 +9,8 @@
     "modules-left": [
         "custom/power",
         "hyprland/workspaces",
-        "custom/archlogo"
+        "custom/archlogo",
+        "hyprland/submap"
     ],
     "modules-center": [
         "hyprland/window"

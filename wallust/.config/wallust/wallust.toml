@@ -78,3 +78,6 @@ rofi.target = '~/.config/rofi/colors.rasi'
 
 obsidian.template = 'colors-obsidian.json'
 obsidian.target = '~/AJB/Sentorus/.obsidian/app.json'
+
+quickshell_overview.template = 'colors-quickshell-overview.qml'
+quickshell_overview.target = '~/.config/quickshell/overview/common/Appearance.qml'
