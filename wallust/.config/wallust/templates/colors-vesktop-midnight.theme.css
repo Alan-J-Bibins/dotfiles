@@ -18,7 +18,7 @@ body {
     font-weight: 400;
 
     /* sizes - unchanged */
-    --gap: 12px;
+    --gap: 8px;
     --divider-thickness: 4px;
     --border-thickness: 1px;
 
@@ -41,7 +41,7 @@ body {
     /* dms button - unchanged */
     --custom-dms-icon: custom;
     --dms-icon-svg-url: url('https://raw.githubusercontent.com/Alan-J-Bibins/dotfiles/refs/heads/main/assets/logo.svg');
-    --dms-icon-svg-size: 90%;
+    --dms-icon-svg-size: 100%;
     --dms-icon-color-before: var(--icon-secondary);
     --dms-icon-color-after: var(--white);
     --custom-dms-background: off;
