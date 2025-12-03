@@ -81,3 +81,7 @@ obsidian.target = '~/AJB/Sentorus/.obsidian/app.json'
 
 quickshell_overview.template = 'colors-quickshell-overview.qml'
 quickshell_overview.target = '~/.config/quickshell/overview/common/Appearance.qml'
+
+vesktop_midnight.template = 'colors-vesktop-midnight.theme.css'
+vesktop_midnight.target = '~/.var/app/dev.vencord.Vesktop/config/vesktop/themes/midnight-background-wallust.theme.css'
+

@@ -12,11 +12,13 @@ export PNPM_HOME="$HOME/.local/share/pnpm"
 export ANDROID_HOME="$HOME/Android/Sdk"
 export PYENV_ROOT="$HOME/.pyenv"
 export SDKMAN_DIR="$HOME/.sdkman"
+export GOBIN="$HOME/go/bin"
 
 # Add custom paths
 export PATH="$PNPM_HOME:$PATH"
 export PATH="$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools"
 export PATH="$PATH:$HOME/Applications/:$HOME/dotfiles/Scripts/"
+export PATH="$GOBIN:$PATH"
 
 # Deno environment
 [ -f "$HOME/.deno/env" ] && . "$HOME/.deno/env"
@@ -56,6 +58,7 @@ alias reloadwaybar='killall -SIGUSR2 waybar'
 alias tsl='sudo -E timeshift-launcher'
 alias ff='clear && fastfetch'
 alias searchfont='fc-list | rg -i'
+alias resetaudio='systemctl --user restart wireplumber pipewire pipewire-pulse'
 
 # ----------------------------------------
 # Functions

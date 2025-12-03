@@ -1,0 +1,149 @@
+/**
+ * @name midnight (wallust color12 accents)
+ * @description Midnight theme with Wallust color12 accents and more opaque gradients.
+ * @author Alan J Bibins (based on refact0r)
+ * @version 2.1.2-wallust
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord
+*/
+
+/* import theme modules */
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+
+body {
+    /* font options - unchanged */
+    --font: 'figtree';
+    --code-font: '';
+    font-weight: 400;
+
+    /* sizes - unchanged */
+    --gap: 12px;
+    --divider-thickness: 4px;
+    --border-thickness: 1px;
+
+    /* animations - unchanged */
+    --animations: on;
+    --list-item-transition: 0.2s ease;
+    --dms-icon-svg-transition: 0.4s ease;
+    --border-hover-transition: 0.2s ease;
+
+    /* top bar - unchanged */
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: off;
+
+    /* window controls - unchanged */
+    --custom-window-controls: on;
+    --window-control-size: 14px;
+
+    /* dms button - unchanged */
+    --custom-dms-icon: custom;
+    --dms-icon-svg-url: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg');
+    --dms-icon-svg-size: 90%;
+    --dms-icon-color-before: var(--icon-secondary);
+    --dms-icon-color-after: var(--white);
+    --custom-dms-background: off;
+    --dms-background-image-url: url('');
+    --dms-background-image-size: cover;
+    --dms-background-color: linear-gradient(70deg, {{color12}}, color-mix(in oklch, {{color12}} 50%, transparent), {{color12}});
+
+    /* background - unchanged */
+    --background-image: on;
+    --background-image-url: url('');
+
+    /* transparency - unchanged */
+    --transparency-tweaks: on;
+    --remove-bg-layer: off;
+    --panel-blur: on;
+    --blur-amount: 12px;
+    --bg-floating: hsla(220, 15%, 13%, 0.9);
+
+    /* chatbar - unchanged */
+    --custom-chatbar: separated;
+    --chatbar-height: 56px;
+
+    /* other - unchanged */
+    --small-user-panel: on;
+}
+
+/* color options - more opaque gradients */
+:root {
+    --colors: on;
+
+    /* text colors - unchanged */
+    --text-0: hsla(220, 15%, 10%, 1);
+    --text-1: hsl(220, 45%, 95%);
+    --text-2: hsl(220, 25%, 85%);
+    --text-3: hsl(220, 20%, 70%);
+    --text-4: hsl(220, 15%, 50%);
+    --text-5: hsl(220, 15%, 35%);
+
+    /* backgrounds - unchanged */
+    --bg-1: hsla(220, 15%, 20%, 0.6);
+    --bg-2: hsla(220, 15%, 16%, 0.6);
+    --bg-3: hsla(220, 15%, 13%, 0.6);
+    --bg-4: hsla(220, 15%, 10%, 0.6);
+    --hover: hsla(221, 19%, 40%, 0.1);
+    --active: hsla(220, 19%, 40%, 0.2);
+    --active-2: hsla(220, 19%, 40%, 0.3);
+    --message-hover: hsla(220, 0%, 0%, 0.1);
+
+    /* accent colors - Wallust color12 with more opaque gradients */
+    --accent-1: {{color12}};
+    --accent-2: {{color12}};
+    --accent-3: color-mix(in oklch, {{color12}} 80%, black);
+    --accent-4: {{color12}};
+    --accent-5: color-mix(in oklch, {{color12}} 70%, black);
+    --accent-new: {{color12}};
+    --mention: linear-gradient(to right, color-mix(in hsl, {{color12}}, transparent 70%) 40%, transparent); /* was 90% */
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, {{color12}}, transparent 80%) 40%, transparent); /* was 95% */
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 70%) 40%, transparent); /* was 90% */
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 80%) 40%, transparent); /* was 95% */
+
+    /* status colors - unchanged */
+    --online: var(--green-2);
+    --dnd: var(--red-2);
+    --idle: var(--yellow-2);
+    --streaming: var(--purple-2);
+    --offline: var(--text-4);
+
+    /* borders - unchanged */
+    --border-light: var(--hover);
+    --border: var(--active);
+    --border-hover: var(--active);
+    --button-border: hsl(220, 0%, 100%, 0.1);
+
+    /* base colors - unchanged */
+    --red-1: oklch(75% 0.12 0);
+    --red-2: oklch(70% 0.12 0);
+    --red-3: oklch(65% 0.12 0);
+    --red-4: oklch(60% 0.12 0);
+    --red-5: oklch(55% 0.12 0);
+
+    --green-1: oklch(75% 0.11 170);
+    --green-2: oklch(70% 0.11 170);
+    --green-3: oklch(65% 0.11 170);
+    --green-4: oklch(60% 0.11 170);
+    --green-5: oklch(55% 0.11 160);
+
+    --blue-1: color-mix(in oklch, {{color12}} 95% black);
+    --blue-2: {{color12}};
+    --blue-3: color-mix(in oklch, {{color12}} 85% black);
+    --blue-4: color-mix(in oklch, {{color12}} 75% black);
+    --blue-5: color-mix(in oklch, {{color12}} 65% black);
+
+    --yellow-1: oklch(80% 0.11 90);
+    --yellow-2: oklch(75% 0.11 90);
+    --yellow-3: oklch(70% 0.11 90);
+    --yellow-4: oklch(65% 0.11 90);
+    --yellow-5: oklch(60% 0.11 90);
+
+    --purple-1: oklch(75% 0.11 310);
+    --purple-2: oklch(70% 0.11 310);
+    --purple-3: oklch(65% 0.11 310);
+    --purple-4: oklch(60% 0.11 310);
+    --purple-5: oklch(55% 0.11 310);
+}
+

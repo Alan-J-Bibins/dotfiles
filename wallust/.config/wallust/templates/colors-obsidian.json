@@ -1,4 +1,6 @@
 {
   "accentColor": "{{color12 | strip}}",
-  "vimMode": true
+  "vimMode": true,
+  "attachmentFolderPath": "./Attachments",
+  "newFileLocation": "current"
 }
