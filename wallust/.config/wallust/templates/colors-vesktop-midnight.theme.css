@@ -40,7 +40,7 @@ body {
 
     /* dms button - unchanged */
     --custom-dms-icon: custom;
-    --dms-icon-svg-url: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg');
+    --dms-icon-svg-url: url('https://raw.githubusercontent.com/Alan-J-Bibins/dotfiles/refs/heads/main/assets/logo.svg');
     --dms-icon-svg-size: 90%;
     --dms-icon-color-before: var(--icon-secondary);
     --dms-icon-color-after: var(--white);
