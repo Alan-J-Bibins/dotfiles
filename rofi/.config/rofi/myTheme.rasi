@@ -25,7 +25,7 @@ window {
     text-color:                     @FG;
     border:                         1px;
     border-color:                   @BDR;
-    border-radius:                  10px;
+    border-radius:                  12px;
     width:                          500px;
     anchor:                         center;
     x-offset:                       0;
@@ -57,7 +57,7 @@ entry {
     placeholder:                    "Search";
     blink:                          true;
     border-color:                   @BDR;
-    border-radius:                  10px;
+    border-radius:                  12px;
     padding:                        8px;
 }
 
@@ -67,7 +67,7 @@ inputbar {
     text-color:                     @FG;
     expand:                         false;
     border:                  	    0px 0px 1px 0px;
-    border-radius:                  10px;
+    border-radius:                  12px;
     border-color:                   @BDR;
     margin:                         0px 0px 0px 0px;
     padding:                        0px;
@@ -94,7 +94,7 @@ listview {
 /* ---- Scrollbar ---- */
 scrollbar {
   border:							1px;
-  border-radius:					10px;
+  border-radius:					12px;
   background-color:					@SEL;
   handle-color: 					@BDR;
   handle-width: 					2px ;
@@ -139,14 +139,14 @@ element normal.urgent,
 element alternate.urgent {
     background-color:               @UGT;
     text-color:                     @FG;
-    border-radius:                  10px;
+    border-radius:                  12px;
 }
 
 element normal.active,
 element alternate.active {
     background-color:               @BGA;
     text-color:                     @SEL;
-    border-radius:                  10px;
+    border-radius:                  12px;
 }
 
 element-text selected,
@@ -154,7 +154,7 @@ element selected {
     background-color:               @BGA;
     text-color:                     #000000;
     border:                  	    0px 0px 0px 0px;
-    border-radius:                  10px;
+    border-radius:                  12px;
     border-color:                   @BDR;
 }
 
@@ -177,8 +177,8 @@ error-message {
     padding:                        20px;
 }
 textbox {
-    padding:                        10px;
-    border-radius:                  10px;
+    padding:                        12px;
+    border-radius:                  12px;
 	background-color:               @BDR;
     text-color:                     @SEL;
     vertical-align:                 0.5;

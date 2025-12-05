@@ -54,10 +54,10 @@ body {
     --background-image-url: url('');
 
     /* transparency - unchanged */
-    --transparency-tweaks: on;
+    --transparency-tweaks: off;
     --remove-bg-layer: off;
-    --panel-blur: on;
-    --blur-amount: 12px;
+    --panel-blur: off;
+    --blur-amount: 0px;
     --bg-floating: hsla(220, 15%, 13%, 0.9);
 
     /* chatbar - unchanged */
@@ -72,6 +72,8 @@ body {
 :root {
     --colors: on;
 
+    --wallust-colorA: {{color12}};
+
     /* text colors - unchanged */
     --text-0: hsla(220, 15%, 10%, 1);
     --text-1: hsl(220, 45%, 95%);
@@ -84,7 +86,7 @@ body {
     --bg-1: hsla(220, 15%, 20%, 0.6);
     --bg-2: hsla(220, 15%, 16%, 0.6);
     --bg-3: hsla(220, 15%, 13%, 0.6);
-    --bg-4: hsla(220, 15%, 10%, 0.6);
+    --bg-4: color-mix(in oklch, var(--wallust-colorA) 10%,black 60%);
     --hover: hsla(221, 19%, 40%, 0.1);
     --active: hsla(220, 19%, 40%, 0.2);
     --active-2: hsla(220, 19%, 40%, 0.3);

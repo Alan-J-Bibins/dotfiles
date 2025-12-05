@@ -85,3 +85,6 @@ quickshell_overview.target = '~/.config/quickshell/overview/common/Appearance.qm
 vesktop_midnight.template = 'colors-vesktop-midnight.theme.css'
 vesktop_midnight.target = '~/.var/app/dev.vencord.Vesktop/config/vesktop/themes/midnight-background-wallust.theme.css'
 
+vesktop_system24.template = 'colors-vesktop-system24.theme.css'
+vesktop_system24.target = '~/.var/app/dev.vencord.Vesktop/config/vesktop/themes/system24-wallust.theme.css'
+

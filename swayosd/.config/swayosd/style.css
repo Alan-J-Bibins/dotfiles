@@ -6,7 +6,7 @@
 
 window#osd {
     padding: 12px 12px;
-    border-radius: 10px;
+    border-radius: 12px;
     border: 1px solid @theme_fg_color;
     background: alpha(@theme_bg_color, 0.8);
 }

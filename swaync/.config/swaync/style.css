@@ -54,7 +54,7 @@
 
 .notification-row .notification-background .notification {
   /* The actual notification */
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid @noti-border-accent;
   padding: 0;
   transition: background 0.15s ease-in-out;
@@ -270,7 +270,7 @@
   background: alpha(@cc-bg, 0.80);
   color: @text-color;
   border: solid @noti-border-color 1px;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .control-center .control-center-list-placeholder {

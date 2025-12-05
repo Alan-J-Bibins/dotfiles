@@ -1,0 +1,143 @@
+/**
+ * @name system24-wallust
+ * @description system24 TUI-style Discord theme adapted for Wallust color12.
+ * @author refact0r (adapted for Wallust by Alan J Bibins)
+ * @version 2.0.1
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/system24
+ * @source https://github.com/refact0r/system24
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+*/
+
+/* import theme modules */
+@import url('https://refact0r.github.io/system24/build/system24.css');
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+
+body {
+    /* font settings */
+    --font: 'Rethink Sans';
+    --code-font: 'DM Mono';
+    font-weight: 400;
+    letter-spacing: -0.05ch;
+
+    /* sizes */
+    --gap: 8px;
+    --divider-thickness: 4px;
+    --border-thickness: 2px;
+    --border-hover-transition: 0.2s ease;
+
+    /* animations */
+    --animations: on;
+    --list-item-transition: 0.2s ease;
+    --dms-icon-svg-transition: 0.4s ease;
+
+    /* top bar */
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: off;
+
+    /* window controls */
+    --custom-window-controls: on;
+    --window-control-size: 14px;
+
+    /* dms button */
+    --custom-dms-icon: on;
+    --dms-icon-svg-url: url('https://raw.githubusercontent.com/Alan-J-Bibins/dotfiles/refs/heads/main/assets/logo.svg');
+    --dms-icon-svg-size: 100%;
+    --dms-icon-color-before: var(--icon-secondary);
+    --dms-icon-color-after: var(--white);
+    --custom-dms-background: off;
+    --dms-background-image-url: url('');
+    --dms-background-image-size: cover;
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2));
+
+    /* background image */
+    --background-image: on;
+    --background-image-url: url('');
+
+    /* transparency */
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+    --blur-amount: 12px;
+    --bg-floating: var(--bg-3);
+
+    /* other */
+    --small-user-panel: on;
+    --unrounding: off;
+    --custom-spotify-bar: on;
+    --ascii-titles: on;
+    --ascii-loader: system24;
+    --panel-labels: on;
+    --label-color: var(--text-muted);
+    --label-font-weight: 500;
+}
+
+/* Colors using wallust color12 as primary accent/base */
+:root {
+    --colors: on;
+
+    /* Use color12 as main accent */
+    --wallust-color12: {{ color12 }};
+    --wallust-color13: {{ color13 }};
+    --wallust-color0: {{color0}}
+
+    /* text colors - adjusted for good contrast */
+    --text-0: var(--bg-4);
+    --text-1: color-mix(in oklch, var(--wallust-color12) 40%, oklch(95% 0 0));
+    --text-2: color-mix(in oklch, var(--wallust-color12) 30%, oklch(85% 0 0));
+    --text-3: color-mix(in oklch, var(--wallust-color12) 20%, oklch(75% 0 0));
+    --text-4: color-mix(in oklch, var(--wallust-color12) 40%, oklch(60% 0 0));
+    --text-5: oklch(40% 0 0);
+
+    /* backgrounds using color12 tint */
+    --bg-1: color-mix(in oklch, var(--wallust-color13) 10%, oklch(31% 0 0));
+    --bg-2: color-mix(in oklch, var(--wallust-color13) 20%, oklch(0% 0 0));
+    --bg-3: color-mix(in oklch, var(--wallust-color13) 5%, oklch(0% 0 0));
+    --bg-4: color-mix(in oklch, var(--wallust-color13) 5%, oklch(0% 0 0 / 0.7));
+    --hover: color-mix(in oklch, var(--wallust-color12) 20%, oklch(54% 0 0 / 0.1));
+    --active: color-mix(in oklch, var(--wallust-color12) 30%, oklch(54% 0 0 / 0.2));
+    --active-2: color-mix(in oklch, var(--wallust-color12) 40%, oklch(54% 0 0 / 0.3));
+    --message-hover: var(--hover);
+
+    /* accent colors based on color12 */
+    --accent-1: color-mix(in oklch, var(--wallust-color12) 80%, oklch(75% 0.13 310));
+    --accent-2: color-mix(in oklch, var(--wallust-color12) 70%, oklch(70% 0.12 310));
+    --accent-3: color-mix(in oklch, var(--wallust-color12) 60%, oklch(65% 0.12 310));
+    --accent-4: color-mix(in oklch, var(--wallust-color12) 50%, oklch(60% 0.12 310));
+    --accent-5: color-mix(in oklch, var(--wallust-color12) 40%, oklch(55% 0.12 310));
+    --accent-new: color-mix(in oklch, var(--wallust-color12) 60%, oklch(70% 0.13 0));
+    
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent);
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent);
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent);
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent);
+
+    /* status colors with color12 influence */
+    --online: color-mix(in oklch, var(--green-2), var(--wallust-color12) 20%);
+    --dnd: color-mix(in oklch, var(--red-2), var(--wallust-color12) 20%);
+    --idle: color-mix(in oklch, var(--yellow-2), var(--wallust-color12) 20%);
+    --streaming: color-mix(in oklch, var(--purple-2), var(--wallust-color12) 20%);
+    --offline: var(--text-4);
+
+    /* borders */
+    --border-light: var(--hover);
+    --border: var(--active);
+    --border-hover: var(--accent-2);
+    --button-border: color-mix(in oklch, var(--wallust-color12) 20%, hsl(220, 0%, 100%, 0.1));
+
+    /* base colors (keeping original but can tint with color12 if desired) */
+    --red-1: oklch(75% 0.13 0);
+    --red-2: oklch(70% 0.13 0);
+    --green-1: oklch(75% 0.12 170);
+    --green-2: oklch(70% 0.12 170);
+    --blue-1: oklch(75% 0.11 215);
+    --blue-2: oklch(70% 0.11 215);
+    --yellow-1: oklch(80% 0.12 90);
+    --yellow-2: oklch(75% 0.12 90);
+    --purple-1: oklch(75% 0.12 310);
+    --purple-2: oklch(70% 0.12 310);
+}
+
