@@ -17,7 +17,7 @@ button {
     background-repeat: no-repeat;
     background-size: 25%;
     border: none;
-	border-radius: 10px;
+	border-radius: 12px;
 	outline-style: none;
 }
 
@@ -51,21 +51,21 @@ button:hover {
 }
 
 button:hover#lock {
-    border-radius: 10px 10px 0px 10px;
+    border-radius: 12px 12px 0px 12px;
     margin : 80px 0px 0px 500px;
 }
 
 button:hover#reboot {
-    border-radius: 0px 10px 10px 10px;
+    border-radius: 0px 12px 12px 12px;
     margin: 0px 530px 80px 0px;
 }
 
 button:hover#logout {
-    border-radius: 10px 0px 10px 10px;
+    border-radius: 12px 0px 12px 12px;
     margin : 0px 0px 80px 500px;
 }
 
 button:hover#shutdown {
-    border-radius: 10px 10px 10px 0px;
+    border-radius: 12px 12px 10px 0px;
     margin : 80px 530px 0px 0px;
 }
