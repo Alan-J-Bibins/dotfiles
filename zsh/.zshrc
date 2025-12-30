@@ -60,6 +60,7 @@ alias ff='clear && fastfetch'
 alias searchfont='fc-list | rg -i'
 alias resetaudio='systemctl --user restart wireplumber pipewire pipewire-pulse'
 alias oc='opencode'
+alias condaan='source /opt/miniconda3/etc/profile.d/conda.sh && conda'
 
 # ----------------------------------------
 # Functions
