@@ -61,6 +61,7 @@ alias searchfont='fc-list | rg -i'
 alias resetaudio='systemctl --user restart wireplumber pipewire pipewire-pulse'
 alias oc='opencode'
 alias condaan='source /opt/miniconda3/etc/profile.d/conda.sh && conda'
+alias napalm='rm -rf .next && npm run dev'
 
 # ----------------------------------------
 # Functions
@@ -169,10 +170,10 @@ eval "$(atuin init zsh)"
 eval "$(fnm env --use-on-cd --shell zsh)"
 
 # Pyenv
-if command -v pyenv >/dev/null 2>&1; then
-    export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init -)"
-fi
+# if command -v pyenv >/dev/null 2>&1; then
+#     export PATH="$PYENV_ROOT/bin:$PATH"
+#     eval "$(pyenv init -)"
+# fi
 
 # SDKMAN
 [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
