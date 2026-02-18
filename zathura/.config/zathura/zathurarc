@@ -9,3 +9,5 @@ set smooth-scroll "true"
 map j feedkeys "<C-Down>"
 map k feedkeys "<C-Up>"
 set selection-clipboard clipboard
+set render-loading "false"
+set render-loading-bg "#000000"
