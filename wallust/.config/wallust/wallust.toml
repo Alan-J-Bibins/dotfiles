@@ -67,8 +67,8 @@ wlogout.target = '~/.config/wlogout/colors.css'
 wofi.template = 'colors-gtkcss.css'
 wofi.target = '~/.config/wofi/colors.css'
 
-spicetify.template = 'colors-spicetify.ini'
-spicetify.target = '~/.config/spicetify/Themes/Pywal/color.ini'
+# spicetify.template = 'colors-spicetify.ini'
+# spicetify.target = '~/.config/spicetify/Themes/Pywal/color.ini'
 
 pywalfox.template = 'colors-pywalfox.json'
 pywalfox.target = '~/.cache/wal/colors.json'
@@ -83,7 +83,7 @@ quickshell_overview.template = 'colors-quickshell-overview.qml'
 quickshell_overview.target = '~/.config/quickshell/overview/common/Appearance.qml'
 
 vesktop_midnight.template = 'colors-vesktop-midnight.theme.css'
-vesktop_midnight.target = '~/.var/app/dev.vencord.Vesktop/config/vesktop/themes/midnight-background-wallust.theme.css'
+vesktop_midnight.target = '~/.config/vesktop/themes/midnight-background-wallust.theme.css'
 
 vesktop_system24.template = 'colors-vesktop-system24.theme.css'
 vesktop_system24.target = '~/.var/app/dev.vencord.Vesktop/config/vesktop/themes/system24-wallust.theme.css'

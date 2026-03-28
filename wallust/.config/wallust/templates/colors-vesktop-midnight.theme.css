@@ -50,7 +50,7 @@ body {
     --dms-background-color: linear-gradient(70deg, {{color12}}, color-mix(in oklch, {{color12}} 50%, transparent), {{color12}});
 
     /* background - unchanged */
-    --background-image: on;
+    --background-image: off;
     --background-image-url: url('');
 
     /* transparency - unchanged */
