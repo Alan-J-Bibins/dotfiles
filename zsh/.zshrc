@@ -13,6 +13,7 @@ export ANDROID_HOME="$HOME/Android/Sdk"
 export PYENV_ROOT="$HOME/.pyenv"
 export SDKMAN_DIR="$HOME/.sdkman"
 export GOBIN="$HOME/go/bin"
+export VCPKG_ROOT="$HOME/.local/share/vcpkg"
 
 # Add custom paths
 export PATH="$PNPM_HOME:$PATH"
@@ -99,6 +100,7 @@ zle -N sesh-sessions
 bindkey -M emacs '\es' sesh-sessions
 bindkey -M vicmd '\es' sesh-sessions
 bindkey -M viins '\es' sesh-sessions
+bindkey -v
 
 # ----------------------------------------
 # Completion System Setup (Optimized)
