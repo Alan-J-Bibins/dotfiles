@@ -205,4 +205,5 @@ hl.window_rule({
     },
     xray = true,
     opacity = "0.8 0.8",
+    workspace = "special:m",
 })
