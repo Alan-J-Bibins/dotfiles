@@ -1,6 +1,11 @@
 {
-  "accentColor": "{{color12 | strip}}",
-  "vimMode": true,
-  "attachmentFolderPath": "./Attachments",
-  "newFileLocation": "current"
+  "cssTheme": "Velocity",
+  "accentColor": "{{color12}}",
+  "enabledCssSnippets": [
+    "zoom"
+  ],
+  "interfaceFontFamily": "",
+  "textFontFamily": "Product Sans",
+  "nativeMenus": false
 }
+

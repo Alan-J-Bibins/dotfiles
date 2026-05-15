@@ -7,4 +7,5 @@ set guioptions "sv"
 set first-page-column 1:2
 set font "Product Sans 10"
 set selection-clipboard clipboard
-map [normal] <Down> feedkeys J
+map <Down> navigate next
+map <Up> navigate previous
