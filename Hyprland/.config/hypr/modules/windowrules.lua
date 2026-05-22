@@ -143,16 +143,7 @@ hl.window_rule({
     match = {
         title = "^(WhatsApp Web)$"
     },
-    workspace = "special:c",
-    group = "set [always]"
-})
-
-hl.window_rule({
-    match = {
-        class = "^(vesktop)$"
-    },
-    workspace = "special:c",
-    xray = true,
+    workspace = "special:i",
     group = "set [always]"
 })
 
@@ -178,8 +169,10 @@ hl.window_rule({
     match = {
         class = "(?i)^(vesktop)$"
     },
-    opacity = "0.8 0.8",
-    xray = 1
+    opacity = "0.9 0.9",
+    workspace = "special:i",
+    xray = true,
+    group = "set [always]"
 })
 
 hl.window_rule({

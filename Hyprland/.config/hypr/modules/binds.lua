@@ -9,7 +9,8 @@ local emoji = "rofimoji -a copy"
 function CloseSpecialWorkspace()
     local current = hl.get_active_special_workspace()
     if current then
-        hl.dispatch(hl.dsp.workspace.toggle_special(current.config_name))
+        local name = current.config_name:gsub("^special:", "")
+        hl.dispatch(hl.dsp.workspace.toggle_special(name))
     end
 end
 
@@ -58,12 +59,23 @@ end
 hl.bind("ALT + grave", hl.dsp.exec_cmd("rofi -show window"))
 
 hl.bind(mainMod .. " + grave", function()
-    CloseSpecialWorkspace()
-    hl.dsp.exec_cmd("qs ipc -c overview call overview toggle")
+    hl.dispatch(hl.dsp.exec_cmd("qs ipc -c overview call overview toggle"))
 end)
 
 hl.bind(mainMod .. " + ALT + T", hl.dsp.group.toggle())
 hl.bind(mainMod .. " + ALT + L", hl.dsp.group.lock_active())
+
+hl.bind(mainMod .. " + Tab", function()
+    hl.dispatch(hl.dsp.window.cycle_next())
+    hl.dispatch(hl.dsp.group.next())
+    hl.dispatch(hl.dsp.window.alter_zorder({ mode = "top" }))
+end)
+
+hl.bind(mainMod .. " + SHIFT + Tab", function()
+    hl.dispatch(hl.dsp.window.cycle_next())
+    hl.dispatch(hl.dsp.group.prev())
+    hl.dispatch(hl.dsp.window.alter_zorder({ mode = "top" }))
+end)
 
 hl.bind(mainMod .. " + M", hl.dsp.workspace.toggle_special("m"))
 hl.bind(mainMod .. " + SHIFT+ M", hl.dsp.window.move({ workspace = "special:m" }))

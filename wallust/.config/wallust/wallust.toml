@@ -91,3 +91,5 @@ vesktop_midnight.target = '~/.config/vesktop/themes/midnight-background-wallust.
 vesktop_system24.template = 'colors-vesktop-system24.theme.css'
 vesktop_system24.target = '~/.var/app/dev.vencord.Vesktop/config/vesktop/themes/system24-wallust.theme.css'
 
+ajb-quickshell.template = 'colors-ajb-quickshell.qml'
+ajb-quickshell.target = '~/.config/quickshell/ajb/Colors.qml'

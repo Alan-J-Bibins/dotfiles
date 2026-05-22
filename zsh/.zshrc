@@ -63,6 +63,7 @@ alias resetaudio='systemctl --user restart wireplumber pipewire pipewire-pulse'
 alias oc='opencode'
 alias condaan='source /opt/miniconda3/etc/profile.d/conda.sh && conda'
 alias napalm='rm -rf .next && npm run dev'
+alias graphify-init="echo 'graphify-out/' >> .gitignore && DEEPSEEK_API_KEY=mock_key graphify . --no-llm && graphify hook install && graphify opencode install"
 
 # ----------------------------------------
 # Functions
@@ -150,9 +151,21 @@ bindkey '^ ' autosuggest-accept
 # Python venv auto-activation
 # ----------------------------------------
 python_venv() {
-    MYVENV=./env
-    [[ -d $MYVENV ]] && source $MYVENV/bin/activate >/dev/null 2>&1
-    [[ ! -d $MYVENV ]] && deactivate >/dev/null 2>&1
+    if [[ -d ./.venv ]]; then
+        MYVENV=./.venv
+    elif [[ -d ./env ]]; then
+        MYVENV=./env
+    else
+        MYVENV=""
+    fi
+
+    # If a venv was found, activate it
+    if [[ -n "$MYVENV" ]]; then
+        source "$MYVENV/bin/activate" >/dev/null 2>&1
+    # If no venv exists but one is currently active, deactivate it
+    elif [[ -n "$VIRTUAL_ENV" ]]; then
+        deactivate >/dev/null 2>&1
+    fi
 }
 autoload -U add-zsh-hook
 add-zsh-hook chpwd python_venv
