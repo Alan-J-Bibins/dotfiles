@@ -59,6 +59,7 @@ end
 hl.bind("ALT + grave", hl.dsp.exec_cmd("rofi -show window"))
 
 hl.bind(mainMod .. " + grave", function()
+    CloseSpecialWorkspace()
     hl.dispatch(hl.dsp.exec_cmd("qs ipc -c overview call overview toggle"))
 end)
 
