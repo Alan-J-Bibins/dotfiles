@@ -114,6 +114,7 @@ hl.bind(mainMod .. " + ALT + W", hl.dsp.exec_cmd("waybar"))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("killall -SIGUSR2 waybar"))
 
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
+hl.bind(mainMod .. " + SHIFT + F", hl.dsp.exec_cmd("~/.config/rofi/scripts/fd_navigation.sh"))
 
 hl.bind("Print",
     hl.dsp.exec_cmd(

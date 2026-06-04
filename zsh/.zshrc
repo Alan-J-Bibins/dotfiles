@@ -63,7 +63,6 @@ alias resetaudio='systemctl --user restart wireplumber pipewire pipewire-pulse'
 alias oc='opencode'
 alias condaan='source /opt/miniconda3/etc/profile.d/conda.sh && conda'
 alias napalm='rm -rf .next && npm run dev'
-alias graphify-init="graphify update . && graphify hook install && graphify opencode install"
 
 # ----------------------------------------
 # Functions
