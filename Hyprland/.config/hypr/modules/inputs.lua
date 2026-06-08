@@ -1,3 +1,11 @@
+function CloseSpecialWorkspace()
+    local current = hl.get_active_special_workspace()
+    if current then
+        local name = current.config_name:gsub("^special:", "")
+        hl.dispatch(hl.dsp.workspace.toggle_special(name))
+    end
+end
+
 hl.config({
     input = {
         kb_layout = "us",
@@ -22,4 +30,12 @@ hl.gesture({
    fingers = 3,
    direction = "horizontal",
    action = "workspace"
+})
+
+hl.gesture({
+   fingers = 3,
+   direction = "down",
+   action = function ()
+       CloseSpecialWorkspace()
+   end
 })
