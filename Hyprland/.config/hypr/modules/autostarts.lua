@@ -1,4 +1,5 @@
 hl.on("hyprland.start", function()
+    hl.exec_cmd("systemctl --user start hyprland-session.target")
     hl.exec_cmd("hyprpm reload -n")
     hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1")
     hl.exec_cmd("awww-daemon")
@@ -18,5 +19,6 @@ hl.on("hyprland.start", function()
 end)
 
 hl.on("hyprland.shutdown", function()
-    hl.exec_cmd('kill -9 "$(cat /tmp/.hyprland-systemd-inhibit)')
+    hl.exec_cmd('kill -9 "$(cat /tmp/.hyprland-systemd-inhibit)"')
+    os.execute("systemctl --user stop hyprland-session.target && sleep 0.1")
 end)

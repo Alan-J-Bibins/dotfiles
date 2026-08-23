@@ -27,15 +27,27 @@ hl.config({
 })
 
 hl.gesture({
-   fingers = 3,
-   direction = "horizontal",
-   action = "workspace"
+    fingers = 3,
+    direction = "horizontal",
+    action = "workspace"
 })
 
 hl.gesture({
-   fingers = 3,
-   direction = "down",
-   action = function ()
-       CloseSpecialWorkspace()
-   end
+    fingers = 3,
+    direction = "down",
+    action = function()
+        CloseSpecialWorkspace()
+    end
+})
+
+hl.gesture({
+    fingers = 3,
+    direction = "up",
+    action = function()
+        local current = hl.get_active_special_workspace()
+        -- Only toggle it on if there isn't a special workspace currently active
+        if not current then
+            hl.dispatch(hl.dsp.workspace.toggle_special("o"))
+        end
+    end
 })

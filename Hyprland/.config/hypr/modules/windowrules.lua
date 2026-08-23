@@ -83,7 +83,8 @@ hl.window_rule({
     match = {
         class = "(?i)^(thunar)$"
     },
-    opacity = "0.8 0.8"
+    opacity = "0.8 0.8",
+    xray = true
 })
 
 hl.window_rule({
@@ -149,8 +150,6 @@ hl.window_rule({
 
 hl.window_rule({
     float = true,
-    pin = true,
-    no_initial_focus = true,
     size = "(monitor_w*0.35) (monitor_h*0.35)",
     move = "((monitor_w*1)-window_w-5), 0",
     match = {

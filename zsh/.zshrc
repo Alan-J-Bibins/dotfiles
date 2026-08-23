@@ -40,6 +40,8 @@ alias n2="NVIM_APPNAME='nvim2' nvim"
 alias t="tmux"
 alias tkill="tmux kill-server"
 alias ta="tmux attach -t"
+alias h="herdr"
+alias hkill="herdr server stop"
 alias tx="tmuxinator"
 alias nf="nvim ./"
 alias ls="eza"
@@ -194,3 +196,6 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 
 # Turso
 export PATH="$PATH:/home/alan/.turso"
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"
