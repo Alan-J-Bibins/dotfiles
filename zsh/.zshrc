@@ -87,21 +87,27 @@ function dls() {
     du -shc "$@" | sort -h
 }
 
-function sesh-sessions() {
-    {
-        exec </dev/tty
-        exec <&1
-        local session
-        session=$(sesh list -T | fzf --height 40% --reverse --border-label ' sesh ' --border --prompt '⚡  ')
-        zle reset-prompt >/dev/null 2>&1 || true
-        [[ -z "$session" ]] && return
-        sesh connect $session
-    }
+function tx-sessions() {
+    zle -I 
+
+    local config_dir="${TMUXINATOR_CONFIG:-$HOME/.config/tmuxinator}"
+    [[ ! -d "$config_dir" ]] && config_dir="$HOME/.tmuxinator"
+
+    local project
+    project=$(fd -e yml -e yaml --max-depth 1 . "$config_dir" --format '{/.}' | fzf --height 40% --reverse --border-label ' tmuxinator ' --border --prompt '⚡  ')
+    
+    if [[ -n "$project" ]]; then
+        # Push the actual command to the interactive shell prompt and execute it directly
+        BUFFER="tmuxinator start ${project}"
+        zle accept-line
+    else
+        zle reset-prompt
+    fi
 }
-zle -N sesh-sessions
-bindkey -M emacs '\es' sesh-sessions
-bindkey -M vicmd '\es' sesh-sessions
-bindkey -M viins '\es' sesh-sessions
+zle -N tx-sessions
+bindkey -M emacs '\es' tx-sessions
+bindkey -M vicmd '\es' tx-sessions
+bindkey -M viins '\es' tx-sessions
 bindkey -v
 
 # ----------------------------------------
