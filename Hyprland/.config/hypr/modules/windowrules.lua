@@ -169,9 +169,7 @@ hl.window_rule({
         class = "(?i)^(vesktop)$"
     },
     opacity = "0.9 0.9",
-    workspace = "special:i",
     xray = true,
-    group = "set [always]"
 })
 
 hl.window_rule({
